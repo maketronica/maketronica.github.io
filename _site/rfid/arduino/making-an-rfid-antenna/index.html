@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Making an RFID antenna for the ID-3LA reader • Maketronica</title>
+    <meta name="description" content="
+
+">
+    <meta name="keywords" content="">
+    
+    
+    	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="Making an RFID antenna for the ID-3LA reader">
+	<meta name="twitter:description" content="
+
+">
+	
+	
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="/images/logo.jpg">
+	
+	<!-- Open Graph -->
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Making an RFID antenna for the ID-3LA reader">
+	<meta property="og:description" content="
+
+">
+	<meta property="og:url" content="/rfid/arduino/making-an-rfid-antenna/">
+	<meta property="og:site_name" content="Maketronica">
+
+    <link rel="canonical" href="/rfid/arduino/making-an-rfid-antenna/">
+
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Maketronica Atom Feed">
+    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- HTML5 Shiv and Media Query Support for IE -->
+    <!--[if lt IE 9]>
+      <script src="/js/vendor/html5shiv.min.js"></script>
+      <script src="/js/vendor/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body id="js-body">
+    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
+
+    <header id="masthead">
+  <div class="inner-wrap">
+    <a href="/" class="site-title">Maketronica</a>
+    <nav role="navigation" class="menu top-menu">
+        <ul class="menu-item">
+	<li class="home"><a href="/">Maketronica</a></li>
+	
+    
+        
+    
+    <li><a href="" ></a></li>
+  
+</ul>
+    </nav>
+  </div><!-- /.inner-wrap -->
+</header><!-- /.masthead -->
+    <nav role="navigation" id="js-menu" class="sliding-menu-content">
+  <h5>Maketronica <span>Table of Contents</span></h5>
+  <ul class="menu-item">
+    <li>
+      <a href="">
+        
+        <div class="title"></div>
+        
+      </a>
+    </li>
+  </ul>
+</nav>
+<button type="button" id="js-menu-trigger" class="sliding-menu-button lines-button x2" role="button" aria-label="Toggle Navigation">
+  <span class="nav-lines"></span>
+</button>
+
+<div id="js-menu-screen" class="menu-screen"></div>
+
+
+    <div id="page-wrapper">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Making an RFID antenna for the ID-3LA reader</h1>
+    <p class="post-meta">Nov 10, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen=""></iframe>
+
+<p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
+
+<p>For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.</p>
+
+<p>I used a ruler to measure the exact outside diameter of the pipe. Since I’ll be wrapping the magnet wire around the pipe, then this will be the inside diameter of my antenna.</p>
+
+<p>I added a couple rubber bands to the very end of the pipe to create a tiny lip the prevent the wire from slipping off the end of the pipe while I was winding it.</p>
+
+<p>I unwound some of the magnet wire and taped it to the pipe to hold it in place.</p>
+
+<p>To determine how many times I needed to wind the wire around the pipe, I used <a href="http://www.circuits.dk/calculator_multi_layer_aircore.htm">this online calculator</a> for air core inductors.  I entered 1.337mH for the inductance (per the <a href="http://www.id-innovations.com/httpdocs/ID-3LA,ID-12LA,ID-20LA.pdf">datasheet</a>), and 60mm for the inner diameter (as measured on the pipe).</p>
+
+<p>I guessed that I would be able to keep my coil about 4mm long (or wide depending on how you look at it). Changing this measurement in the calculator doesn’t change the number of turns very much. If you’re going to calibrate the antenna at the end, this value is even less important. 4mm is a pretty safe guess to just get us in the right ballpark.</p>
+
+<p>Finally, I entered 30AWG for the wire guage, as this was the guage of the magent wire I was using.  You should obviously enter whatever guage you’re using.</p>
+
+<p>The calculator then said that I needed to wrap the wire around the pipe 108 times, so that’s what I did.</p>
+
+<p>Next I took the antenna off the pipe (don’t do this if you’re still planning to tune it), burned the insulation off each end of the wire coming out of the antenna coil, and soldered on a couple short lengths of 24AWG wires that fit better into a breadboard.</p>
+
+<p>Then I plugged the antenna wires into a breadboard that I already had the ID-3LA wired to an arduino, and loaded with some code for testing.</p>
+
+<p><img src="/images/rfid-schematic1.png" alt="Schematic Diagram" /></p>
+
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;SoftwareSerial.h&gt;</span>
+
+<span class="n">SoftwareSerial</span> <span class="n">rfid</span> <span class="o">=</span> <span class="n">SoftwareSerial</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span>  
+<span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="n">rfid</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ready&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
+  
+  <span class="k">while</span><span class="p">(</span><span class="n">rfid</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">msg</span> <span class="o">+=</span> <span class="kt">char</span><span class="p">(</span><span class="n">rfid</span><span class="p">.</span><span class="n">read</span><span class="p">());</span>
+    <span class="n">delay</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  
+  <span class="k">if</span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">length</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">13</span><span class="p">)</span> <span class="p">{</span>
+     <span class="n">msg</span><span class="o">=</span><span class="n">msg</span><span class="p">.</span><span class="n">substring</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">13</span><span class="p">);</span>
+     <span class="n">tone</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">262</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+<p>Lastly, I tested the antenna with an RFID keycard and a small RFID keyfob.  The antenna was able to detect the keyfob from about 2 inches away, and the card from about 3 inches.</p>
+
+<p>Admittedly, this was a pretty quick and sloppy RFID antenna. Better range is probably possible with a tighter and more precisely wound coil.</p>
+
+<p>I didn’t tune this antenna at all, and that could probably help with range.</p>
+
+<p>One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.</p>
+
+<p>Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process in a future post. You might have access to one at school or <a href="http://spaces.makerspace.com/makerspace-directory">your local Makerspace</a>. </p>
+
+<p>Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  </p>
+
+<p>If you’ve figured out any other tricks to make this even easier, or more precise, please post a comment below.</p>
+
+<p>Good Luck!</p>
+
+
+  </article>
+
+</div>
+
+      <footer role="contentinfo" id="site-footer">
+	<nav role="navigation" class="menu bottom-menu">
+		<ul class="menu-item">
+		
+      
+        
+      
+			<li><a href="" ></a></li>
+		
+		</ul>
+	</nav><!-- /.bottom-menu -->
+	<p class="copyright">&#169; 2015 <a href="">Maketronica</a> powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> + <a href="http://mmistakes.github.io/skinny-bones-jekyll/" rel="nofollow">Skinny Bones</a>.</p>
+</footer>
+    </div>
+
+    <script src="/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="/js/main.js"></script>
+
+  </body>
+
+</html>

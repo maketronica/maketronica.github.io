@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>Maketronica</title>
+  <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
+    <icon>/apple-touch-icon-precomposed.png</icon>
+  <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  <link href="/" rel="alternate" type="text/html"/>
+  <updated>2015-11-27T15:47:14-07:00</updated>
+  <id>/</id>
+  <author>
+    <name></name>
+    <uri>/</uri>
+    
+  </author>
+
+  
+  <entry>
+    <title>Making an RFID antenna for the ID-3LA reader</title>
+    <link href="/rfid/arduino/making-an-rfid-antenna/"/>
+    <updated>2015-11-10T00:00:00-07:00</updated>
+    <id>/rfid/arduino/making-an-rfid-antenna</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      
+      &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MrDXfCmt4-U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
+
+&lt;p&gt;For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.&lt;/p&gt;
+
+&lt;p&gt;I used a ruler to measure the exact outside diameter of the pipe. Since I’ll be wrapping the magnet wire around the pipe, then this will be the inside diameter of my antenna.&lt;/p&gt;
+
+&lt;p&gt;I added a couple rubber bands to the very end of the pipe to create a tiny lip the prevent the wire from slipping off the end of the pipe while I was winding it.&lt;/p&gt;
+
+&lt;p&gt;I unwound some of the magnet wire and taped it to the pipe to hold it in place.&lt;/p&gt;
+
+&lt;p&gt;To determine how many times I needed to wind the wire around the pipe, I used &lt;a href=&quot;http://www.circuits.dk/calculator_multi_layer_aircore.htm&quot;&gt;this online calculator&lt;/a&gt; for air core inductors.  I entered 1.337mH for the inductance (per the &lt;a href=&quot;http://www.id-innovations.com/httpdocs/ID-3LA,ID-12LA,ID-20LA.pdf&quot;&gt;datasheet&lt;/a&gt;), and 60mm for the inner diameter (as measured on the pipe).&lt;/p&gt;
+
+&lt;p&gt;I guessed that I would be able to keep my coil about 4mm long (or wide depending on how you look at it). Changing this measurement in the calculator doesn’t change the number of turns very much. If you’re going to calibrate the antenna at the end, this value is even less important. 4mm is a pretty safe guess to just get us in the right ballpark.&lt;/p&gt;
+
+&lt;p&gt;Finally, I entered 30AWG for the wire guage, as this was the guage of the magent wire I was using.  You should obviously enter whatever guage you’re using.&lt;/p&gt;
+
+&lt;p&gt;The calculator then said that I needed to wrap the wire around the pipe 108 times, so that’s what I did.&lt;/p&gt;
+
+&lt;p&gt;Next I took the antenna off the pipe (don’t do this if you’re still planning to tune it), burned the insulation off each end of the wire coming out of the antenna coil, and soldered on a couple short lengths of 24AWG wires that fit better into a breadboard.&lt;/p&gt;
+
+&lt;p&gt;Then I plugged the antenna wires into a breadboard that I already had the ID-3LA wired to an arduino, and loaded with some code for testing.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/rfid-schematic1.png&quot; alt=&quot;Schematic Diagram&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;SoftwareSerial.h&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Ready&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;tone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;262&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Lastly, I tested the antenna with an RFID keycard and a small RFID keyfob.  The antenna was able to detect the keyfob from about 2 inches away, and the card from about 3 inches.&lt;/p&gt;
+
+&lt;p&gt;Admittedly, this was a pretty quick and sloppy RFID antenna. Better range is probably possible with a tighter and more precisely wound coil.&lt;/p&gt;
+
+&lt;p&gt;I didn’t tune this antenna at all, and that could probably help with range.&lt;/p&gt;
+
+&lt;p&gt;One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process in a future post. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
+
+&lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  &lt;/p&gt;
+
+&lt;p&gt;If you’ve figured out any other tricks to make this even easier, or more precise, please post a comment below.&lt;/p&gt;
+
+&lt;p&gt;Good Luck!&lt;/p&gt;
+
+
+    </content>
+  </entry>
+  
+  
+</feed>
