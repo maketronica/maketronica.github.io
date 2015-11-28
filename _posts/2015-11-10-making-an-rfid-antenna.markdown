@@ -2,13 +2,14 @@
 layout: post
 title:  "Making an RFID antenna for the ID-3LA reader"
 date:   2015-11-10
+comments: true
 image:
   teaser: rfid1.png
 categories: rfid arduino
 ---
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen></iframe>
-
 Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen></iframe>
 
 For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.
 
@@ -69,7 +70,7 @@ I didn't tune this antenna at all, and that could probably help with range.
 
 One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn't bother.
 
-Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I'll go over that process in a future post. You might have access to one at school or [your local Makerspace][makerspaces]. 
+Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I'll go over that process [in a future post]({% post_url 2015-11-16-calibrating-an-rfid-antenna %}). You might have access to one at school or [your local Makerspace][makerspaces]. 
 
 Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  
 

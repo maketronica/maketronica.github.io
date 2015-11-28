@@ -1,6 +1,6 @@
 # Site wide configuration
 
-title: Maketronica
+title: MakeTronica
 description: "Make something, preferably incorporating moving electrons."
 logo: logo.jpg # 120x120 px default image used for Twitter summary card
 teaser: teaser.jpg # 400x250 px default teaser image used in image archive grid

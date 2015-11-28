@@ -5,15 +5,50 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 27 Nov 2015 15:55:42 -0700</pubDate>
-    <lastBuildDate>Fri, 27 Nov 2015 15:55:42 -0700</lastBuildDate>
+    <pubDate>Fri, 27 Nov 2015 16:54:48 -0700</pubDate>
+    <lastBuildDate>Fri, 27 Nov 2015 16:54:48 -0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Making an RFID antenna for the ID-3LA reader</title>
-        <description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MrDXfCmt4-U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+        <title>Calibrating an RFID antenna.</title>
+        <description>&lt;p&gt;If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see &lt;a href=&quot;/rfid/arduino/making-an-rfid-antenna/&quot;&gt;my previous post&lt;/a&gt; on the subject.&lt;/p&gt;
 
-&lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nPKfv6anwIs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I wound up another RFID antenna like I did in the previous post, but this time I skipped the part where I took it off the PVC pipe.&lt;/p&gt;
+
+&lt;p&gt;I took the pipe with the antenna and the Arduino down to our local makerspace to use one of their oscilloscopes.&lt;/p&gt;
+
+&lt;p&gt;I connected the scope in parallel to the antenna and the chip, and used a 10X probe on channel one on the scope. I knew things were hooked up right when I could see a 70V-peak 125khz sine wave on the scope (your voltate will probably be different, but the frequency should not).&lt;/p&gt;
+
+&lt;p&gt;To determine if the coil had too much, or too little, inductance, I used a large magnet and brought it close to the antenna while watching the scope. If the voltage on the scope decreases, then the coil has too much inductance. If, on the other hand, it increases, then… you guessed it, there’s too little inductance.&lt;/p&gt;
+
+&lt;p&gt;To add (or remove) inductance, you simply need to remove (or add) turns to/from the coil.  Pay attention here.  If the voltage decreases, you need to add inductance, so you remove turns (unwind some wire).  However, if the voltage increases, you need to remove inductance, so you add more turns (wind more wire) onto the coil. Perhaps an easier way to remember is that the voltage indicates what you need to do. If it increases, add more turns.  If it decreses, remove turns.&lt;/p&gt;
+
+&lt;p&gt;I would recommend not adding or removing more than one turn at a time, and as you get closer to proper calibration, you likely only be adding or removing wire a quarter turn at a time.&lt;/p&gt;
+
+&lt;p&gt;In my case, I had too much inductance, so I had to unwind some wire. From this point it’s just a matter of adding and removing turns, in smaller and smaller increments, while you try to zero in to a point where the voltage on the scope doesn’t change when you bring the magnet close to your coil. Easy peasy.&lt;/p&gt;
+
+&lt;p&gt;When I was done, the range on the antenna improved by 50%.&lt;/p&gt;
+
+&lt;p&gt;If you figure out any tricks to get a better calibration, please post a comment below.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 16 Nov 2015 00:00:00 -0700</pubDate>
+        <link>/rfid/arduino/calibrating-an-rfid-antenna/</link>
+        <guid isPermaLink="true">/rfid/arduino/calibrating-an-rfid-antenna/</guid>
+        
+        
+        <category>rfid</category>
+        
+        <category>arduino</category>
+        
+      </item>
+    
+      <item>
+        <title>Making an RFID antenna for the ID-3LA reader</title>
+        <description>&lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MrDXfCmt4-U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
 &lt;p&gt;For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.&lt;/p&gt;
 
@@ -72,7 +107,7 @@
 
 &lt;p&gt;One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.&lt;/p&gt;
 
-&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process in a future post. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/rfid/arduino/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  &lt;/p&gt;
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Making an RFID antenna for the ID-3LA reader • Maketronica</title>
-    <meta name="description" content="
+    <meta name="description" content="Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
 ">
     <meta name="keywords" content="">
@@ -11,7 +11,7 @@
     
     	<!-- Twitter Cards -->
 	<meta name="twitter:title" content="Making an RFID antenna for the ID-3LA reader">
-	<meta name="twitter:description" content="
+	<meta name="twitter:description" content="Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
 ">
 	
@@ -24,7 +24,7 @@
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Making an RFID antenna for the ID-3LA reader">
-	<meta property="og:description" content="
+	<meta property="og:description" content="Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
 ">
 	<meta property="og:url" content="/rfid/arduino/making-an-rfid-antenna/">
@@ -96,9 +96,9 @@
   </header>
 
   <article class="post-content">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen=""></iframe>
+    <p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
 
-<p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen=""></iframe>
 
 <p>For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.</p>
 
@@ -157,7 +157,7 @@
 
 <p>One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.</p>
 
-<p>Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process in a future post. You might have access to one at school or <a href="http://spaces.makerspace.com/makerspace-directory">your local Makerspace</a>. </p>
+<p>Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process <a href="/rfid/arduino/calibrating-an-rfid-antenna/">in a future post</a>. You might have access to one at school or <a href="http://spaces.makerspace.com/makerspace-directory">your local Makerspace</a>. </p>
 
 <p>Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  </p>
 
@@ -168,6 +168,30 @@
 
   </article>
 
+  
+<div id="disqus_thread"></div>
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//maketronica.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
 </div>
 
       <footer role="contentinfo" id="site-footer">
