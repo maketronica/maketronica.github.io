@@ -5,13 +5,13 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 27 Nov 2015 22:36:00 -0700</pubDate>
-    <lastBuildDate>Fri, 27 Nov 2015 22:36:00 -0700</lastBuildDate>
+    <pubDate>Sat, 28 Nov 2015 09:42:25 -0700</pubDate>
+    <lastBuildDate>Sat, 28 Nov 2015 09:42:25 -0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Calibrating an RFID antenna.</title>
-        <description>&lt;p&gt;If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see &lt;a href=&quot;/rfid/arduino/making-an-rfid-antenna/&quot;&gt;my previous post&lt;/a&gt; on the subject.&lt;/p&gt;
+        <description>&lt;p&gt;If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see &lt;a href=&quot;/making-an-rfid-antenna/&quot;&gt;my previous post&lt;/a&gt; on the subject.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nPKfv6anwIs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
@@ -34,13 +34,9 @@
 &lt;p&gt;If you figure out any tricks to get a better calibration, please post a comment below.&lt;/p&gt;
 </description>
         <pubDate>Mon, 16 Nov 2015 00:00:00 -0700</pubDate>
-        <link>/rfid/arduino/calibrating-an-rfid-antenna/</link>
-        <guid isPermaLink="true">/rfid/arduino/calibrating-an-rfid-antenna/</guid>
+        <link>/calibrating-an-rfid-antenna/</link>
+        <guid isPermaLink="true">/calibrating-an-rfid-antenna/</guid>
         
-        
-        <category>rfid</category>
-        
-        <category>arduino</category>
         
       </item>
     
@@ -107,7 +103,7 @@
 
 &lt;p&gt;One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.&lt;/p&gt;
 
-&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/rfid/arduino/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  &lt;/p&gt;
 
@@ -117,13 +113,9 @@
 
 </description>
         <pubDate>Tue, 10 Nov 2015 00:00:00 -0700</pubDate>
-        <link>/rfid/arduino/making-an-rfid-antenna/</link>
-        <guid isPermaLink="true">/rfid/arduino/making-an-rfid-antenna/</guid>
+        <link>/making-an-rfid-antenna/</link>
+        <guid isPermaLink="true">/making-an-rfid-antenna/</guid>
         
-        
-        <category>rfid</category>
-        
-        <category>arduino</category>
         
       </item>
     
