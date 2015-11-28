@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>Maketronica</title>
+  <title>MakeTronica</title>
   <generator uri="https://github.com/jekyll/jekyll">Jekyll v2.4.0</generator>
     <icon>/apple-touch-icon-precomposed.png</icon>
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2015-11-27T18:14:21-07:00</updated>
+  <updated>2015-11-27T18:37:06-07:00</updated>
   <id>/</id>
   <author>
     <name></name>
