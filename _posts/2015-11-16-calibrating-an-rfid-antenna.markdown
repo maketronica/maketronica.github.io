@@ -5,7 +5,11 @@ date:   2015-11-16
 comments: true
 image:
   teaser: teaser-rfid2.png
+  feature: teaser-rfid2.png
 categories: #These aren't tags. They make sub folders in the url (so then if you reorganized the categories, all the urls will change! (bad)).  need to figure out tags instead.
+seo_keywords: rfid antenna coil oscilliscope calibrate ID-3LA ID3LA arduino
+seo_description: How to calibrate a custom RFID antenna for the ID-3LA reader connected to an Arduino.
+
 ---
 
 If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see [my previous post]({% post_url 2015-11-10-making-an-rfid-antenna %}) on the subject.

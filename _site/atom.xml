@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2015-11-29T08:41:20-07:00</updated>
+  <updated>2015-11-29T09:13:18-07:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -27,7 +27,7 @@
       
     </author>
     <content type="html">
-      
+      &lt;img src=&quot;/images/teaser-rfid2.png&quot;&gt;&lt;br/&gt;
       &lt;p&gt;If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see &lt;a href=&quot;/making-an-rfid-antenna/&quot;&gt;my previous post&lt;/a&gt; on the subject.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nPKfv6anwIs&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -64,7 +64,7 @@
       
     </author>
     <content type="html">
-      
+      &lt;img src=&quot;/images/rfid1.png&quot;&gt;&lt;br/&gt;
       &lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MrDXfCmt4-U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;

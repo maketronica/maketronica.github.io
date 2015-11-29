@@ -5,7 +5,11 @@ date:   2015-11-10
 comments: true
 image:
   teaser: rfid1.png
+  feature: rfid1.png
 categories: #These aren't tags. They make sub folders in the url (so then if you reorganized the categories, all the urls will change! (bad)).  need to figure out tags instead.
+seo_keywords: rfid antenna coil ID-3LA ID3LA arduino
+seo_description: How to make an RFID antenna for the ID-3LA reader connected to an Arduino.
+
 ---
 Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
