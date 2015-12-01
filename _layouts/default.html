@@ -6,7 +6,7 @@
     {% if page.seo_description %}<meta name="description" content="{{ page.seo_description }}">
     {% elsif page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">
     {% endif %}
-    {% if page.seo_keywords %}<meta name="keywords" content="{{ page.seo_keywords | join: ', ' }} maker making">{% endif %}
+    {% if page.seo_keywords %}<meta name="keywords" content="{{ page.seo_keywords | join: ', ' }} maker makingelectronics">{% endif %}
     {% if page.author %}
       {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
     {% endif %}
