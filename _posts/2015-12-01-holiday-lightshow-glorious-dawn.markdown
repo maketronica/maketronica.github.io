@@ -15,6 +15,4 @@ This is our holiday lightshow for 2015. I worked on this off and on for the bett
 
 Enjoy!
 
-https://www.youtube.com/watch?v=jpKxinBsRq0
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jpKxinBsRq0" frameborder="0" allowfullscreen></iframe>

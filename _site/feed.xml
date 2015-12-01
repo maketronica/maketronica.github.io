@@ -5,8 +5,8 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 01 Dec 2015 16:11:14 -0700</pubDate>
-    <lastBuildDate>Tue, 01 Dec 2015 16:11:14 -0700</lastBuildDate>
+    <pubDate>Tue, 01 Dec 2015 16:14:49 -0700</pubDate>
+    <lastBuildDate>Tue, 01 Dec 2015 16:14:49 -0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -14,8 +14,6 @@
         <description>&lt;p&gt;This is our holiday lightshow for 2015. I worked on this off and on for the better part of the year, and managed to get to all working just in time for Thanksgiving.&lt;/p&gt;
 
 &lt;p&gt;Enjoy!&lt;/p&gt;
-
-&lt;p&gt;https://www.youtube.com/watch?v=jpKxinBsRq0&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/jpKxinBsRq0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 </description>
