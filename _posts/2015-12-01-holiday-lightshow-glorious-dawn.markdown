@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Holiday Lightshow - Glorious Dawn"
-date:   2015-11-16
+date:   2015-12-01
 comments: true
 image:
   teaser: teaser-lightshow.png
