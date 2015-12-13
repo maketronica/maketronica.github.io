@@ -5,9 +5,33 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 11 Dec 2015 21:34:33 -0700</pubDate>
-    <lastBuildDate>Fri, 11 Dec 2015 21:34:33 -0700</lastBuildDate>
+    <pubDate>Sat, 12 Dec 2015 17:18:44 -0700</pubDate>
+    <lastBuildDate>Sat, 12 Dec 2015 17:18:44 -0700</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Increasing Arduino Digital Outputs</title>
+        <description>&lt;p&gt;Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to process of wiring up the chip and writing code to activate the new outputs, and then I daisy chain 5 shift registers together to individually control 40 different digital outputs.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-1&quot;&gt;Part 1:&lt;/h2&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/cAT07gy4DII&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;h2 id=&quot;part-2&quot;&gt;Part 2:&lt;/h2&gt;
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/RjzmKYg66nM&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The library mentioned in the second video is &lt;a href=&quot;https://github.com/maketronica/MultiShiftRegister&quot;&gt;available here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s a schematic that you may find helpful showing two shift registers daisy chained toghether.  To add more, just follow the same pattern as the second one.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/increase_arduino_outputs/schematic1_schem.png&quot; alt=&quot;Schematic with one shift register&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 10 Dec 2015 00:00:00 -0700</pubDate>
+        <link>/increase-arduino-digital-outputs/</link>
+        <guid isPermaLink="true">/increase-arduino-digital-outputs/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Holiday Lightshow - Glorious Dawn</title>
