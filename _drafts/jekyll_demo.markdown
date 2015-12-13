@@ -17,7 +17,7 @@ of how to do things in jekyll, to prevent having to constantly look things up.
 Here's a youtube embed.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nPKfv6anwIs" frameborder="0" allowfullscreen></iframe>
 
-Here's [a link to another post]({% post_url 2015-11-10-making-an_rfid_antenna %})
+Here's [a link to another post]({% post_url 2015-11-10-making-an-rfid-antenna %})
 
 Here's [an external link][external_link_thing] (see the other thing defined at the end.
 

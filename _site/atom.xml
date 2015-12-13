@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2015-12-12T17:18:44-07:00</updated>
+  <updated>2015-12-12T17:36:12-07:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -15,6 +15,33 @@
     
   </author>
 
+  
+  <entry>
+    <title>3D Printing an RFID Antenna Coil Bobbin</title>
+    <link href="/3d-printing-rfid-antenna-coil/"/>
+    <updated>2015-12-12T00:00:00-07:00</updated>
+    <id>/3d-printing-rfid-antenna-coil</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      &lt;img src=&quot;/images/teaser-3d-antenna-bobbin.png&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;After figuring out how to create a custom wound RFID antenna for the ID-3LA RFID reader connected to an Arduino, I gave a shot at designing a 3D printable bobbin to wind the antenna onto.  I was hoping for more range than I got, but otherwise, it worked.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3zH84t2XnWw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Links:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/maketronica/rfid_bobbin&quot;&gt;OpenSCAD Files&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.shapeways.com/shops/maketronica3d&quot;&gt;Ready to wind bobbins&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+    </content>
+  </entry>
   
   <entry>
     <title>Increasing Arduino Digital Outputs</title>
