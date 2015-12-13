@@ -32,6 +32,13 @@
   padding-right: (.25 * $masthead-height);
 }
 
+.rss-logo {
+  float: right;
+  width: 40px;
+  height: auto;
+  padding-right: (.25 * $masthead-height);
+}
+
 .social-links {
   list-style-type: none;
   //float: right;
