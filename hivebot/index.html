@@ -1,0 +1,17 @@
+---
+layout: page
+title: Hivebot
+---
+
+<div ng-app="chartApp" ng-controller="TempChartController">
+  <h2>Temperatures</h2>
+  <div linear-chart
+       id='temperature-chart'
+       class='default-chart'
+       chart-data-url="http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv"
+       chart-column-names='bot_temp, brood_temp'
+       chart-nest-names='HIVE_0, HIVE_1'
+       nest-names-column-name='probeid'
+       padding='30'
+       path-class='important'></div>
+</div>
