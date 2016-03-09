@@ -159,18 +159,102 @@
       </header>
 
       <article class="post-content">
-        <div ng-app="chartApp" ng-controller="TempChartController">
-  <h2>Temperatures</h2>
+        <p>
+  The Maketronica Hivebot is a collection of hardware and (predominantely)
+  open-source software installed in the beehive in our back yard, with the
+  purpose of tracking environmental conditions whithin and around the hives,
+  as well as provide instructional material so that others may possibly
+  apply some of what I've done to their own beehive, or beer fridge, or
+  whatever maker project they have in mind.
+</p>
+
+<h2>Chart</h2>
+<p>
+  Here's a sample chart of live data coming from the current hivebots (probably
+  installed in the hives, but if the values look way off, one or both may be
+  in my office getting a makeover. Soon, there should be a link right here 
+  somewhere to a page with a bunch more charts.
+</p>
+<div ng-app="chartApp" ng-controller="TempChartController">
   <div linear-chart
        id='temperature-chart'
        class='default-chart'
        chart-data-url="http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv"
-       chart-column-names='bot_temp, brood_temp'
+       chart-column-names='brood_temp'
        chart-nest-names='HIVE_0, HIVE_1'
        nest-names-column-name='probeid'
        padding='30'
        path-class='important'></div>
 </div>
+<h2>Videos</h2>
+<p>
+  I'll be putting together a bunch of videos details the process of setting up
+  each of the sensors within the beehives on my 
+  <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">MakeTronica YouTube channel</a>.
+</p>
+<h2>Software</h2>
+<p>
+  The following is a list of open-source sofware I've written that, as a 
+  collection, provides all of the hivebot functionality.
+</p>
+<p>
+  <strong>Although the code is open-source, I am currently only working on it
+  to serve my own purposes.</strong> You are free to download it, modify it,
+  and try to get it working on your own beehives and hardware, but I'm not
+  likely be be able to provide any support or assistance at this time.
+</p>
+<p>
+  To get all of the pieces working together, you want to, at a bare minimum,
+  consider yourself proficient at reading and running Ruby applications, basic
+  networking, electronics assembly and soldering (for the sensors),
+  troubleshooting, and self-sufficient problem solving.
+</p>
+<h3>hivebot.avr</h3>
+<p>
+  <a href="https://github.com/maketronica/hivebot.avr">hivebot.avr</a> is the
+  code for the Arduino in each hive. The Arduino has several sensors and the
+  sensor data is sent over a USB serial connection to a Raspberry Pi, also in
+  the hive, for transmission back to the house.
+</p>
+<p>
+  The original plan was to have everything running off of Arduinos, but I ran
+  into too many problems consistently transmitting the data back to the house,
+  that I eventually moved some stuff to Raspberry Pis. The Ardunio's may
+  eventually be retired in favor of attaching all sensors directly to the Pis,
+  but that remains to be seen.
+</p>
+
+<h3>hivebot.rb</h3>
+<p>
+  <a href="https://github.com/maketronica/hivebot.rb">hivebot.rb</a> is the
+  Ruby code that runs on a Raspberry Pi in each beehive. It reads data over the
+  USB serial connection from the Arduino, and then transmits it over our WiFi
+  network to hivemom.rb, running on another Raspberry Pi in the house.
+</p>
+<p>
+  Each Raspberry Pi is running a recent (as of the time I installed it) version
+  of <a href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate.</a>
+</p>
+<h3>hivemom.rb</h3>
+<p>
+  <a href="https://github.com/maketronica/hivemom.rb">hivemom.rb</a> is the
+  Ruby code running on a Pi back in the house. It's a simple HTTP RACK app
+  that receives RESTful posts from each hivebot.rb, stores the data in a
+  local database, writes out .csv files for hivedash.csv, and pushes copies
+  of the .csv files up to Amazon S3 to enable generating the demo charts on 
+  this website (www.maketronica.com).
+</p>
+<p>
+  Each Raspberry Pi is running a recent (as of the time I installed it) version
+  of <a href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate.</a>
+</p>
+<h3>hivedash.jkyl</h3>
+<p>
+  <a href="https://github.com/maketronica/hivedash.jkyl">hivedash.jkyl</a> is
+  a static <a href='https://jekyllrb.com/'>Jekyll</a> website served from
+  the same Raspberry Pi that Hivemom runs on to generate graphs of sensor
+  data.
+</p>
 
       </article>
 
