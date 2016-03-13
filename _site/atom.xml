@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-03-12T22:03:18-07:00</updated>
+  <updated>2016-03-12T22:36:13-07:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -15,6 +15,39 @@
     
   </author>
 
+  
+  <entry>
+    <title>Hivebot Brain - Adding first sensors to a beehive</title>
+    <link href="/hivebot-brain/"/>
+    <updated>2016-03-12T00:00:00-07:00</updated>
+    <id>/hivebot-brain</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      &lt;img src=&quot;/images/teaser-hivebot-brain.png&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;I’ve been working up to this for a while, and it’s finally coming together,
+and not a moment too soon. The bees will be arriving in a little over a month
+and I’ve still got a lot of work to do.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nSBx-UG7nZw&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I bought the precut boards to make a shallow box to put on top of the beehive
+to keep the core electronics in.&lt;/p&gt;
+
+&lt;p&gt;Then I inserted some 1/8” wire mesh into the bottom of the box to allow airflow
+but to keep the bees out of the electronics.  I don’t want them coating the
+Raspberry Pi and Arduino in propolis.  &lt;/p&gt;
+
+&lt;p&gt;For now, I’m putting the first temperature and humidity sensor on a breadboard
+while I’m still figuring out how I want everything placed.&lt;/p&gt;
+
+&lt;p&gt;More info is available on &lt;a href=&quot;/hivebot&quot;&gt;the official hivebot page&lt;/a&gt;&lt;/p&gt;
+
+    </content>
+  </entry>
   
   <entry>
     <title>3D Printing an RFID Antenna Coil Bobbin</title>
@@ -90,6 +123,43 @@
 &lt;p&gt;Enjoy!&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/jpKxinBsRq0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+    </content>
+  </entry>
+  
+  <entry>
+    <title>Post Template</title>
+    <link href="/jekyll_demo/"/>
+    <updated>2015-11-16T00:00:00-07:00</updated>
+    <id>/jekyll_demo</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      &lt;img src=&quot;/images/teaser-rfid2.png&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;This is a template post to quick start new posts as well as a sample documenti
+of how to do things in jekyll, to prevent having to constantly look things up.&lt;/p&gt;
+
+&lt;p&gt;Here’s a youtube embed.
+&amp;lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nPKfv6anwIs&quot; frameborder=&quot;0&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s &lt;a href=&quot;/making-an-rfid-antenna/&quot;&gt;a link to another post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s &lt;a href=&quot;/hivebot&quot;&gt;a link to an interla page&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s &lt;a href=&quot;http://www.circuits.dk/calculator_multi_layer_aircore.htm&quot;&gt;an external link&lt;/a&gt; (see the other thing defined at the end.&lt;/p&gt;
+
+&lt;p&gt;Here’s an image tag…
+&lt;img src=&quot;/images/rfid-schematic1.png&quot; alt=&quot;Embeded Image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Here’s some C++ code.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
 
     </content>
   </entry>

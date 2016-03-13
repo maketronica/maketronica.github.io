@@ -19,6 +19,8 @@ Here's a youtube embed.
 
 Here's [a link to another post]({% post_url 2015-11-10-making-an-rfid-antenna %})
 
+Here's [a link to an interla page](/hivebot)
+
 Here's [an external link][external_link_thing] (see the other thing defined at the end.
 
 Here's an image tag...
