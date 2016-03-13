@@ -5,13 +5,20 @@ path {
     stroke-width: 2;
     fill: none;
 }
-path.ord1st { stroke: red; }
-path.ord2nd { stroke: orange; }
-path.ord3rd { stroke: yellow; }
-path.ord4th { stroke: green; }
-path.ord5th { stroke: blue; }
-path.ord6th { stroke: indigo; }
-path.ord7th { stroke: violet; }
+
+.ord1st { stroke: red; }
+.ord2nd { stroke: orange; }
+.ord3rd { stroke: green; }
+.ord4th { stroke: blue; }
+.ord5th { stroke: indigo; }
+.ord6th { stroke: violet; }
+
+text.ord1st { fill: red; }
+text.ord2nd { fill: orange; }
+text.ord3rd { fill: green; }
+text.ord4th { fill: blue; }
+text.ord5th { fill: indigo; }
+text.ord6th { fill: violet; }
 
 #temperature-chart {
   width: 800px;
@@ -24,4 +31,10 @@ path.ord7th { stroke: violet; }
     stroke: grey;
     stroke-width: 1;
     shape-rendering: crispEdges;
+}
+
+.legend {
+  font-size: 16px;
+  font-weight: bold;
+  text-anchor: middle;
 }

@@ -29,16 +29,28 @@ function linearChartDirective($window) {
         .key(function(d) { return d[nestIdentifier] })
         .entries(data)
 
+
       dataColumns = d3.keys(data[0]).filter(function(key) {
         return ($.inArray(key, columnsToChart) > -1)
       })
 
+      legendSpace = width()/(dataNest.length + dataColumns.length);
+
       nestedColumns = []
+      counter = 0;
       dataNest.forEach(function(nest) {
         if ($.inArray(nest.key, nestsToChart) > -1) {
-          dataColumns.forEach(function(column) {
+          dataColumns.forEach(function(column, columnIndex) {
             nestedColumns.push([nest.key, column]);
+
+            svg().append('text')
+              .attr("x", (legendSpace/2)+counter*legendSpace)
+              .attr("y", height()- 35)
+              .attr("class", "legend " + ordclass(counter+1))
+              .text(nest.key+'['+column+']')
+            counter++;
           })  
+
         }
       })
       scale.domain(nestedColumns);
