@@ -27,4 +27,12 @@ Raspberry Pi and Arduino in propolis.
 For now, I'm putting the first temperature and humidity sensor on a breadboard
 while I'm still figuring out how I want everything placed.
 
+Parts List: 
+
+* [1/8" Wire Mesh Screen](http://amzn.to/1LwoMmE)
+* [Breadboard](http://amzn.to/1RUT7Yz)
+* [Temp/Humidity Sensor](http://amzn.to/1ZbVpIq)
+* [Sainsmart UNO R3](http://amzn.to/1RUTh2c) (Arduino compatible)
+* [Raspberry Pi 2 Model B](http://amzn.to/1ZbVETF)
+
 More info is available on [the official hivebot page](/hivebot)

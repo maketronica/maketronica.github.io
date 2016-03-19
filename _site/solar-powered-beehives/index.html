@@ -2,35 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Calibrating an RFID antenna. • MakeTronica</title>
-    <meta name="description" content="How to calibrate a custom RFID antenna for the ID-3LA reader connected to an Arduino.">
+    <title>Solar Powered Beehives • MakeTronica</title>
+    <meta name="description" content="Running solar power to beehives for electronic sensors.">
     
-    <meta name="keywords" content="rfid antenna coil oscilliscope calibrate ID-3LA ID3LA arduino maker makingelectronics">
+    <meta name="keywords" content="beehive, solar, raspberry pi, arduino maker makingelectronics">
     
     
     	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Calibrating an RFID antenna.">
+	<meta name="twitter:title" content="Solar Powered Beehives">
 	
-    <meta name="twitter:description" content="How to calibrate a custom RFID antenna for the ID-3LA reader connected to an Arduino.">
+    <meta name="twitter:description" content="Running solar power to beehives for electronic sensors.">
 	
 	
 	
 	
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="/images/teaser-rfid2.png">
+	<meta name="twitter:image" content="/images/teaser-solar-powered-beehives.png">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Calibrating an RFID antenna.">
+	<meta property="og:title" content="Solar Powered Beehives">
 	
-    <meta property="og:description" content="How to calibrate a custom RFID antenna for the ID-3LA reader connected to an Arduino.">
+    <meta property="og:description" content="Running solar power to beehives for electronic sensors.">
 	
-	<meta property="og:url" content="/calibrating-an-rfid-antenna/">
+	<meta property="og:url" content="/solar-powered-beehives/">
 	<meta property="og:site_name" content="MakeTronica">
 
 
-    <link rel="canonical" href="/calibrating-an-rfid-antenna/">
+    <link rel="canonical" href="/solar-powered-beehives/">
 
     <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="MakeTronica Atom Feed">
     <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
@@ -166,8 +166,8 @@
     <div class="post">
 
       <header class="post-header">
-        <h1 class="post-title">Calibrating an RFID antenna.</h1>
-        <p class="post-meta">Nov 16, 2015</p>
+        <h1 class="post-title">Solar Powered Beehives</h1>
+        <p class="post-meta">Mar 19, 2016</p>
         <a data-pin-do="buttonBookmark" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_28.png" /></a>
         <!-- Please call pinit.js only once per page -->
         <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
@@ -176,27 +176,29 @@
       </header>
 
       <article class="post-content">
-        <p>If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see <a href="/making-an-rfid-antenna/">my previous post</a> on the subject.</p>
+        <p>Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
+and environmental sensors.</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nPKfv6anwIs" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yVRE8kFTeko" frameborder="0" allowfullscreen=""></iframe>
 
-<p>I wound up another RFID antenna like I did in the previous post, but this time I skipped the part where I took it off the PVC pipe.</p>
+<p>I ran low voltage outdoor lighting wire from the solar panels to junction boxes
+under each hive. On the end of the wire that ran to the solar panels, I atteched
+one half of a USB cable to plug in to the usb port on the solar charge controller.</p>
 
-<p>I took the pipe with the antenna and the Arduino down to our local makerspace to use one of their oscilloscopes.</p>
+<p>I ran another cable from each juntion box up to the electronics box on the
+beehives and attached the other (micro) end of the USB cables to it to plug in
+to the Raspberry Pis.</p>
 
-<p>I connected the scope in parallel to the antenna and the chip, and used a 10X probe on channel one on the scope. I knew things were hooked up right when I could see a 70V-peak 125khz sine wave on the scope (your voltate will probably be different, but the frequency should not).</p>
+<p>Parts List:</p>
 
-<p>To determine if the coil had too much, or too little, inductance, I used a large magnet and brought it close to the antenna while watching the scope. If the voltage on the scope decreases, then the coil has too much inductance. If, on the other hand, it increases, then… you guessed it, there’s too little inductance.</p>
+<ul>
+  <li><a href="http://amzn.to/22uxBkX">Low Voltage Outdoor Lighting Wire</a></li>
+  <li><a href="http://amzn.to/1RrzAEN">Terminal Block</a></li>
+  <li><a href="http://amzn.to/1nXLqJ2">Terminal Block Jumpers</a></li>
+  <li><a href="http://amzn.to/1RrzSeO">Junction Box</a></li>
+  <li><a href="http://amzn.to/1RrzVr5">Micro USB Cables</a></li>
+</ul>
 
-<p>To add (or remove) inductance, you simply need to remove (or add) turns to/from the coil.  Pay attention here.  If the voltage decreases, you need to add inductance, so you remove turns (unwind some wire).  However, if the voltage increases, you need to remove inductance, so you add more turns (wind more wire) onto the coil. Perhaps an easier way to remember is that the voltage indicates what you need to do. If it increases, add more turns.  If it decreses, remove turns.</p>
-
-<p>I would recommend not adding or removing more than one turn at a time, and as you get closer to proper calibration, you likely only be adding or removing wire a quarter turn at a time.</p>
-
-<p>In my case, I had too much inductance, so I had to unwind some wire. From this point it’s just a matter of adding and removing turns, in smaller and smaller increments, while you try to zero in to a point where the voltage on the scope doesn’t change when you bring the magnet close to your coil. Easy peasy.</p>
-
-<p>When I was done, the range on the antenna improved by 50%.</p>
-
-<p>If you figure out any tricks to get a better calibration, please post a comment below.</p>
 
       </article>
 
@@ -221,8 +223,8 @@
         * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
         */
         var disqus_config = function () {
-        //  this.page.url = '/calibrating-an-rfid-antenna/'; // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = '/calibrating-an-rfid-antenna'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        //  this.page.url = '/solar-powered-beehives/'; // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '/solar-powered-beehives'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');

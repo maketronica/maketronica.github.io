@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-03-12T22:53:04-07:00</updated>
+  <updated>2016-03-19T13:15:37-06:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -15,6 +15,45 @@
     
   </author>
 
+  
+  <entry>
+    <title>Solar Powered Beehives</title>
+    <link href="/solar-powered-beehives/"/>
+    <updated>2016-03-19T00:00:00-06:00</updated>
+    <id>/solar-powered-beehives</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      &lt;img src=&quot;/images/teaser-solar-powered-beehives.png&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
+and environmental sensors.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/yVRE8kFTeko&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I ran low voltage outdoor lighting wire from the solar panels to junction boxes
+under each hive. On the end of the wire that ran to the solar panels, I atteched
+one half of a USB cable to plug in to the usb port on the solar charge controller.&lt;/p&gt;
+
+&lt;p&gt;I ran another cable from each juntion box up to the electronics box on the
+beehives and attached the other (micro) end of the USB cables to it to plug in
+to the Raspberry Pis.&lt;/p&gt;
+
+&lt;p&gt;Parts List:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/22uxBkX&quot;&gt;Low Voltage Outdoor Lighting Wire&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzAEN&quot;&gt;Terminal Block&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXLqJ2&quot;&gt;Terminal Block Jumpers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzSeO&quot;&gt;Junction Box&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzVr5&quot;&gt;Micro USB Cables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+    </content>
+  </entry>
   
   <entry>
     <title>Hivebot Brain - Adding first sensors to a beehive</title>
@@ -43,6 +82,16 @@ Raspberry Pi and Arduino in propolis.  &lt;/p&gt;
 
 &lt;p&gt;For now, I’m putting the first temperature and humidity sensor on a breadboard
 while I’m still figuring out how I want everything placed.&lt;/p&gt;
+
+&lt;p&gt;Parts List: &lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1LwoMmE&quot;&gt;1/8” Wire Mesh Screen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RUT7Yz&quot;&gt;Breadboard&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1ZbVpIq&quot;&gt;Temp/Humidity Sensor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RUTh2c&quot;&gt;Sainsmart UNO R3&lt;/a&gt; (Arduino compatible)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1ZbVETF&quot;&gt;Raspberry Pi 2 Model B&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;More info is available on &lt;a href=&quot;/hivebot&quot;&gt;the official hivebot page&lt;/a&gt;&lt;/p&gt;
 
