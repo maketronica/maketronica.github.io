@@ -13,6 +13,15 @@ seo_description: How to make an RFID antenna for the ID-3LA reader connected to 
 ---
 Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
+Parts List:
+
+* [Magnet Wire](http://amzn.to/1RrCdX6)
+* [Breadboard](http://amzn.to/1nXOJzP)
+* [Sainsmart UNO R3](http://amzn.to/1nXOMvL)
+* [ID-3LA RFID Chip](https://www.sparkfun.com/products/11862)
+* [RFID Cards](http://amzn.to/1RrF0Qj)
+* [RFID Keyfobs](http://amzn.to/22uDUVK)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen></iframe>
 
 For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.

@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-03-19T13:15:37-06:00</updated>
+  <updated>2016-03-19T13:55:54-06:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -263,6 +263,17 @@ of how to do things in jekyll, to prevent having to constantly look things up.&l
     <content type="html">
       &lt;img src=&quot;/images/rfid1.png&quot;&gt;&lt;br/&gt;
       &lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
+
+&lt;p&gt;Parts List:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrCdX6&quot;&gt;Magnet Wire&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXOJzP&quot;&gt;Breadboard&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXOMvL&quot;&gt;Sainsmart UNO R3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/11862&quot;&gt;ID-3LA RFID Chip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrF0Qj&quot;&gt;RFID Cards&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/22uDUVK&quot;&gt;RFID Keyfobs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/MrDXfCmt4-U&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
 
