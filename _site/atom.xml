@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-03-20T17:38:30-06:00</updated>
+  <updated>2016-03-20T17:39:27-06:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -15,6 +15,53 @@
     
   </author>
 
+  
+  <entry>
+    <title>Beehive Temperature and Humidity Sensors</title>
+    <link href="/broodbox_sensor_cage/"/>
+    <updated>2016-03-20T00:00:00-06:00</updated>
+    <id>/broodbox_sensor_cage</id>
+    <author>
+      <name></name>
+      <uri>/</uri>
+      
+    </author>
+    <content type="html">
+      &lt;img src=&quot;/images/teaser-brood-sensors.png&quot;&gt;&lt;br/&gt;
+      &lt;p&gt;Today I installed another temperature and humidty sensor in the broodbox of our
+beehives. &lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/1hl_YaXvU0A&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I created a cage out of 1/8” wire mesh (to protect the sensor from propolis)
+and installed it into one of the hive frames.  This makes it easy to remove for
+maintenance.&lt;/p&gt;
+
+&lt;p&gt;Next I soldered the sensor, a resistor, and some wires to a small project
+board, and attached some cardboard to the back to protect it from shorting out
+against the wire mesh.&lt;/p&gt;
+
+&lt;p&gt;Then I put the assembly inside the cage on the frame, and placed the whole
+thing into the broodbox in the beehive, like any other frame except this one
+has wires hanging out of the beehive.&lt;/p&gt;
+
+&lt;p&gt;Then I connected the signal wire to the Arduino in the electronics box, and
+wired the 5 volt and ground wires into the junction box beneath the hive.&lt;/p&gt;
+
+&lt;p&gt;Live charts of sensor data available on the &lt;a href=&quot;/hivebot/charts&quot;&gt;charts page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Parts List:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1LwoMmE&quot;&gt;1/8” Wire Mesh Screen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1ZbVpIq&quot;&gt;Temp/Humidity Sensor&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/21CpDnB&quot;&gt;Prototype PCB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RUTh2c&quot;&gt;Sainsmart UNO R3&lt;/a&gt; (Arduino compatible)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1ZbVETF&quot;&gt;Raspberry Pi 2 Model B&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
   
   <entry>
     <title>Solar Powered Beehives</title>
