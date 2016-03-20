@@ -80,7 +80,6 @@
     <meta name="theme-color" content="#ffffff">
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/skinnybones.js"></script>
   </head>
@@ -178,20 +177,22 @@
 <p>
   Here's a sample chart of live data coming from the current hivebots (probably
   installed in the hives, but if the values look way off, one or both may be
-  in my office getting a makeover. Soon, there should be a link right here 
-  somewhere to a page with a bunch more charts.
+  in my office getting a makeover. Lots more charts available on the
+  <a href='/hivebot/charts'>charts page</a>.
 </p>
-<div ng-app="chartApp" ng-controller="TempChartController">
-  <div linear-chart
-       id='temperature-chart'
-       class='default-chart'
-       chart-data-url="http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv"
-       chart-column-names='bot_temp, bot_humidity'
-       chart-nest-names='HIVE_0, HIVE_1'
-       nest-names-column-name='probeid'
-       padding='30'
-       path-class='important'></div>
-</div>
+<script>
+  chart1 = lineChart({
+      dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+      groupColumn: 'probeid',
+      groupsToChart: 'HIVE_0, HIVE_1',
+      columnsToChart: 'brood_temp'
+  })
+  chart1();
+</script>
+<ul class='legend'>
+  <li class='ord1st'>Hive 0 Temp</li>
+  <li class='ord2nd'>Hive 1 Temp</li>
+</ul>
 <h2>Videos</h2>
 <p>
   I'll be putting together a bunch of videos detailing the process of setting up

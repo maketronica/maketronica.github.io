@@ -21,10 +21,6 @@
     <lastmod>2015-12-01T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/jekyll_demo/</loc>
-    <lastmod>2015-11-16T00:00:00-07:00</lastmod>
-  </url>
-  <url>
     <loc>/calibrating-an-rfid-antenna/</loc>
     <lastmod>2015-11-16T00:00:00-07:00</lastmod>
   </url>
@@ -34,6 +30,9 @@
   </url>
   <url>
     <loc>/about/</loc>
+  </url>
+  <url>
+    <loc>/hivebot/charts/</loc>
   </url>
   <url>
     <loc>/hivebot/</loc>

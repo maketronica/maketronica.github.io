@@ -6,12 +6,12 @@ path {
     fill: none;
 }
 
-.ord1st { stroke: red; }
-.ord2nd { stroke: orange; }
-.ord3rd { stroke: green; }
-.ord4th { stroke: blue; }
-.ord5th { stroke: indigo; }
-.ord6th { stroke: violet; }
+.ord1st { stroke: red; color: red; }
+.ord2nd { stroke: orange; color: orange  }
+.ord3rd { stroke: green; color: green }
+.ord4th { stroke: blue; color: blue }
+.ord5th { stroke: indigo; color: indigo }
+.ord6th { stroke: violet; color: violet }
 
 text.ord1st { fill: red; }
 text.ord2nd { fill: orange; }
@@ -19,6 +19,11 @@ text.ord3rd { fill: green; }
 text.ord4th { fill: blue; }
 text.ord5th { fill: indigo; }
 text.ord6th { fill: violet; }
+
+ul.legend li {
+  display: inline;
+  margin: 1em;
+}
 
 #temperature-chart {
   width: 800px;
@@ -33,8 +38,6 @@ text.ord6th { fill: violet; }
     shape-rendering: crispEdges;
 }
 
-.legend {
-  font-size: 16px;
-  font-weight: bold;
-  text-anchor: middle;
+table.charts th {
+  text-align: center;
 }

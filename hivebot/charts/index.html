@@ -1,0 +1,107 @@
+---
+layout: page
+title: Hivebot Charts
+---
+<table class='charts'>
+  <tr>
+    <th><h2>Hive 0</h2></th>
+    <th><h2>Hive 1</h2></th>
+  </tr>
+  <tr>
+    <th colspan=2>
+      <h3>Temperatures</h3>
+      <ul class='legend'>
+        <li class='ord1st'>Attic Temp</li>
+        <li class='ord2nd'>Broodbox Temp</li>
+        <li class='ord3rd'>Ambient/Outside Temp</li>
+      </ul>
+    </th>
+  </tr>
+  <tr>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_0',
+            columnsToChart: 'bot_temp, brood_temp'
+        })
+        chart1();
+      </script>
+    </td>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_1',
+            columnsToChart: 'bot_temp, brood_temp'
+        })
+        chart1();
+      </script>
+    </td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      <h3>Humidity</h3>
+      <ul class='legend'>
+        <li class='ord1st'>Attic Humidity</li>
+        <li class='ord2nd'>Broodbox Humidity</li>
+        <li class='ord3rd'>Ambient/Outside Humidity</li>
+      </ul>
+    </th>
+  </tr>
+  <tr>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_0',
+            columnsToChart: 'bot_humidity, brood_humidity'
+        })
+        chart1();
+      </script>
+    </td>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_1',
+            columnsToChart: 'bot_humidity, brood_humidity'
+        })
+        chart1();
+      </script>
+    </td>
+  </tr>
+  <tr>
+    <th colspan=2>
+      <h3>Uptime</h3>
+    </th>
+  </tr>
+  <tr>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_0',
+            columnsToChart: 'bot_uptime'
+        })
+        chart1();
+      </script>
+    </td>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_1',
+            columnsToChart: 'bot_uptime'
+        })
+        chart1();
+      </script>
+    </td>
+  </tr>
+</table>

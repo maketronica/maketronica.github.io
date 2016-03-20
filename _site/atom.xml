@@ -7,7 +7,7 @@
   <subtitle>Make something, preferably incorporating moving electrons.</subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="/" rel="alternate" type="text/html"/>
-  <updated>2016-03-19T13:55:54-06:00</updated>
+  <updated>2016-03-20T14:13:27-06:00</updated>
   <id>/</id>
   <author>
     <name></name>
@@ -172,43 +172,6 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 
 &lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/jpKxinBsRq0&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-    </content>
-  </entry>
-  
-  <entry>
-    <title>Post Template</title>
-    <link href="/jekyll_demo/"/>
-    <updated>2015-11-16T00:00:00-07:00</updated>
-    <id>/jekyll_demo</id>
-    <author>
-      <name></name>
-      <uri>/</uri>
-      
-    </author>
-    <content type="html">
-      &lt;img src=&quot;/images/teaser-rfid2.png&quot;&gt;&lt;br/&gt;
-      &lt;p&gt;This is a template post to quick start new posts as well as a sample documenti
-of how to do things in jekyll, to prevent having to constantly look things up.&lt;/p&gt;
-
-&lt;p&gt;Here’s a youtube embed.
-&amp;lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/nPKfv6anwIs&quot; frameborder=&quot;0&quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s &lt;a href=&quot;/making-an-rfid-antenna/&quot;&gt;a link to another post&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s &lt;a href=&quot;/hivebot&quot;&gt;a link to an interla page&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s &lt;a href=&quot;http://www.circuits.dk/calculator_multi_layer_aircore.htm&quot;&gt;an external link&lt;/a&gt; (see the other thing defined at the end.&lt;/p&gt;
-
-&lt;p&gt;Here’s an image tag…
-&lt;img src=&quot;/images/rfid-schematic1.png&quot; alt=&quot;Embeded Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Here’s some C++ code.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
 
     </content>
   </entry>
