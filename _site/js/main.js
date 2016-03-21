@@ -90,15 +90,22 @@ function lineChart(config) {
           }
         });
 
+        var  minX = d3.min(linesToPlot, function(line) { return line.values[0].x });
+        var  maxX = d3.max(linesToPlot, function(line) { return line.values[line.values.length-1].x });
+        var xDomain = [minX,maxX]
+
+        var  minY = d3.min(linesToPlot, function (line) {
+          return d3.min(line.values, function(d) { return d.y })
+        })
+        var  maxY = d3.max(linesToPlot, function (line) {
+          return d3.max(line.values, function(d) { return d.y })
+        })
+        var yPadding = (maxY-minY)*0.05
+        var yDomain = [minY-yPadding,maxY+yPadding]
+
         // Scale the range of the data
-        x.domain([
-          d3.min(linesToPlot, function(line) { return line.values[0].x }),
-          d3.max(linesToPlot, function(line) { return line.values[line.values.length-1].x })
-        ]);
-        y.domain([
-          d3.min(linesToPlot, function(line) { return line.values[0].y }),
-          d3.max(linesToPlot, function(line) { return line.values[line.values.length-1].y })
-        ]);
+        x.domain(xDomain);
+        y.domain(yDomain);
 
         // Add the X Axis
         svg.append("g")
@@ -117,21 +124,12 @@ function lineChart(config) {
           .append('g')
           .attr('class', 'line');
 
-        var  maxY = d3.max(linesToPlot, function (line) {
-          return d3.max(line.values, function(d) { return d.y })
-        })
-        var  minY = d3.min(linesToPlot, function (line) {
-          return d3.min(line.values, function(d) { return d.y })
-        })
-        var yPadding = (maxY-minY)*0.05
         var yScale = d3.scale.linear()
-          .domain([minY-yPadding, maxY+yPadding])
+          .domain(yDomain)
           .range([height, 0]);
         
-        var  minX = d3.min(linesToPlot, function(line) { return line.values[0].x });
-        var  maxX = d3.max(linesToPlot, function(line) { return line.values[line.values.length-1].x });
         var xScale = d3.time.scale()
-            .domain([minX, maxX])
+            .domain(xDomain)
             .range([0, width]);
 
         var dataLine = d3.svg.line()
