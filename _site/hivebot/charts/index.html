@@ -238,6 +238,36 @@
     </td>
   </tr>
   <tr>
+  <tr>
+    <th colspan=2>
+      <h3>Weight (lbs)</h3>
+    </th>
+  </tr>
+  <tr>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_0',
+            columnsToChart: 'hive_lbs'
+        })
+        chart1();
+      </script>
+    </td>
+    <td width='50%'>
+      <script>
+        chart1 = lineChart({
+            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+            groupColumn: 'probeid',
+            groupsToChart: 'HIVE_1',
+            columnsToChart: 'hive_lbs'
+        })
+        chart1();
+      </script>
+    </td>
+  </tr>
+  <tr>
     <th colspan=2>
       <h3>Uptime (minutes)</h3>
     </th>
