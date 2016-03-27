@@ -4,18 +4,16 @@ title:  "Hivebot Brain - Adding first sensors to a beehive"
 date:   2016-03-12
 comments: true
 image:
-  teaser: teaser-hivebot-brain.png #400x240 pixels
-  feature: teaser-hivebot-brain.png #used by twitter meta tags
+  teaser: hivebot-brain.png #400x240 pixels
 seo_keywords: beehive, honey bees, raspberry pi, arduino, temperature, humidity, hivebot
 seo_description: Adding environmental sensors to a beehive, step 1.
-
+youtube-embed-id: nSBx-UG7nZw
+amazon-keywords: arduino temperature humidity
 ---
 
 I've been working up to this for a while, and it's finally coming together,
 and not a moment too soon. The bees will be arriving in a little over a month
 and I've still got a lot of work to do.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nSBx-UG7nZw" frameborder="0" allowfullscreen></iframe>
 
 I bought the precut boards to make a shallow box to put on top of the beehive
 to keep the core electronics in.

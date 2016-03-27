@@ -4,17 +4,15 @@ title:  "Beehive Temperature and Humidity Sensors"
 date:   2016-03-20
 comments: true
 image:
-  teaser: teaser-brood-sensors.png #400x240 pixels
-  feature: teaser-brood-sensors.png #used by twitter meta tags
+  teaser: brood-sensors.png #400x240 pixels
 seo_keywords: beehive, temperature, humidity, arduino, raspberry pi
 seo_description: Installing a Temperature/Humidity sensor into a beehive.
-
+youtube-embed-id: 1hl_YaXvU0A
+amazon-keywords: raspberry pi temperature humidity
 ---
 
 Today I installed another temperature and humidty sensor in the broodbox of our
 beehives. 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1hl_YaXvU0A" frameborder="0" allowfullscreen></iframe>
 
 I created a cage out of 1/8" wire mesh (to protect the sensor from propolis)
 and installed it into one of the hive frames.  This makes it easy to remove for

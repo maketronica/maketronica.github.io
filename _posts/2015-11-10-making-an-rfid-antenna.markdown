@@ -5,11 +5,10 @@ date:   2015-11-10
 comments: true
 image:
   teaser: rfid1.png
-  feature: rfid1.png
-categories: #These aren't tags. They make sub folders in the url (so then if you reorganized the categories, all the urls will change! (bad)).  need to figure out tags instead.
 seo_keywords: rfid antenna coil ID-3LA ID3LA arduino
 seo_description: How to make an RFID antenna for the ID-3LA reader connected to an Arduino.
-
+youtube-embed-id: MrDXfCmt4-U
+amazon-keywords: arduino rfid antenna 
 ---
 Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
 
@@ -21,8 +20,6 @@ Parts List:
 * [ID-3LA RFID Chip](https://www.sparkfun.com/products/11862)
 * [RFID Cards](http://amzn.to/1RrF0Qj)
 * [RFID Keyfobs](http://amzn.to/22uDUVK)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MrDXfCmt4-U" frameborder="0" allowfullscreen></iframe>
 
 For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.
 
@@ -44,7 +41,7 @@ Next I took the antenna off the pipe (don't do this if you're still planning to 
 
 Then I plugged the antenna wires into a breadboard that I already had the ID-3LA wired to an arduino, and loaded with some code for testing.
 
-![Schematic Diagram]({{ site.url }}/images/rfid-schematic1.png)
+![Schematic Diagram](/images/rfid-schematic1.png)
 
 {% highlight c++ %}
 #include <SoftwareSerial.h>

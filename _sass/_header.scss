@@ -1,0 +1,54 @@
+#header-bar {
+  background: $color-primary-darker;
+  color: $color-primary-light;
+  border-bottom: 0.4em solid $color-primary;
+
+  a {
+    color: $color-primary-light;
+    text-decoration: none;
+    &:hover { color: $color-secondary-light }
+    &:active { color: $color-secondary-lighter }
+  }
+
+  a.site-title {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  .logo {
+    max-width: 5em;
+    float: left;
+    border: solid 2px $color-primary-light;
+  }
+
+  .flag {
+    display: inline-block;
+    padding-left: 0.5em;
+  }
+
+  .rss-logo {
+    max-width: 2em;
+    height: auto;
+    float: right;
+  }
+
+  .top-bar {
+    background-color: $color-primary-darker;
+    ul { background-color: $color-primary-darker; }
+    ul.submenu { 
+      background-color: $color-primary;
+    }
+    ul li a:after { border-color: $color-primary-lighter rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) }
+    ul.submenu li {
+      border: solid 1px;
+      a { color: $color-primary-darker; }
+      background-color: $color-primary-lighter;
+      border-color: $color-primary-dark;
+      &:hover {
+        a { color: $color-secondary-lighter; }
+        background-color: $color-secondary-darker;
+        border-color: $color-tertiary-light;
+      }
+    }
+  }
+}

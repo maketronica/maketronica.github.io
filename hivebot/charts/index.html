@@ -2,136 +2,198 @@
 layout: page
 title: Hivebot Charts
 ---
-<table class='charts'>
-  <tr>
-    <th><h2>Hive 0</h2></th>
-    <th><h2>Hive 1</h2></th>
-  </tr>
-  <tr>
-    <th colspan=2>
-      <h3>Temperature (F)</h3>
+<p>
+  The MakeTronica Hivebot is a collection of hardware and (predominantely)
+  open-source software installed in the beehives in our back yard, with the
+  purpose of tracking environmental conditions within and around the hives,
+  as well as provide instructional material so that others may possibly
+  apply some of what I've done to their own beehive, or beer fridge, or
+  whatever maker project they have in mind.
+</p>
+
+<p>This page houses all of the currently available charts and data. More
+details, as well as links to software and videos are available on the
+<a href='/hivebot'>main page</a>.</p>
+<br>
+<div id='charts'>
+  <ul class="tabs" data-tabs id='metric-tabs'>
+    <li class="tabs-title is-active"><a href="#temp-panel">Temperature</a></li>
+    <li class="tabs-title"><a href="#humidity-panel">Humidity</a></li>
+    <li class="tabs-title"><a href="#weight-panel">Weight</a></li>
+    <li class="tabs-title"><a href="#uptime-panel">Uptime</a></li>
+  </ul>
+  <div class='chart-header row'>
+    <div class='small-6 columns'><h3 class='hive-id'>Hive 1</h3></div>
+    <div class='small-6 columns'><h3 class='hive-id'>Hive 2</h3></div>
+  </div>
+  <div class="tabs-content" data-tabs-content='metric-tabs'>
+    <div class="tabs-panel is-active" id="temp-panel">
+      <div class='row'>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              tempChart1 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_0',
+                  columnsToChart: 'bot_temp, brood_temp',
+              })
+              tempChart1.dropAnchor();
+              tempChart1.render();
+            </script>
+          </td></tr></table>
+        </div>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              tempChart2 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_1',
+                  columnsToChart: 'bot_temp, brood_temp'
+              })
+              tempChart2.dropAnchor();
+              tempChart2.render();
+            </script>
+          </td></tr></table>
+        </div>
+      </div>
       <ul class='legend'>
-        <li class='ord1st'>Attic Temp</li>
-        <li class='ord2nd'>Broodbox Temp</li>
-        <li class='ord3rd'>Ambient/Outside Temp</li>
+        <li class='label ord1st'>Attic Temp</li>
+        <li class='label ord2nd'>Brood Temp</li>
+        <li class='label ord3rd'>Ambient Temp (coming soon)</li>
       </ul>
-    </th>
-  </tr>
-  <tr>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_0',
-            columnsToChart: 'bot_temp, brood_temp'
-        })
-        chart1();
-      </script>
-    </td>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_1',
-            columnsToChart: 'bot_temp, brood_temp'
-        })
-        chart1();
-      </script>
-    </td>
-  </tr>
-  <tr>
-    <th colspan=2>
-      <h3>Humidity</h3>
+    </div>
+    <div class="tabs-panel" id="humidity-panel">
+      <div class='row'>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              humidityChart1 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_0',
+                  columnsToChart: 'bot_humidity, brood_humidity'
+              })
+              humidityChart1.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#humidity-panel').is(':visible')) {
+                  humidityChart1.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              humidityChart2 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_1',
+                  columnsToChart: 'bot_humidity, brood_humidity'
+              })
+              humidityChart2.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#humidity-panel').is(':visible')) {
+                  humidityChart2.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+      </div>
       <ul class='legend'>
-        <li class='ord1st'>Attic Humidity</li>
-        <li class='ord2nd'>Broodbox Humidity</li>
-        <li class='ord3rd'>Ambient/Outside Humidity</li>
+        <li class='label ord1st'>Attic Humidity</li>
+        <li class='label ord2nd'>Brood Humidity</li>
+        <li class='label ord3rd'>Ambient Humidity (coming soon)</li>
       </ul>
-    </th>
-  </tr>
-  <tr>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_0',
-            columnsToChart: 'bot_humidity, brood_humidity'
-        })
-        chart1();
-      </script>
-    </td>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_1',
-            columnsToChart: 'bot_humidity, brood_humidity'
-        })
-        chart1();
-      </script>
-    </td>
-  </tr>
-  <tr>
-  <tr>
-    <th colspan=2>
-      <h3>Weight (lbs)</h3>
-    </th>
-  </tr>
-  <tr>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_0',
-            columnsToChart: 'hive_lbs'
-        })
-        chart1();
-      </script>
-    </td>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_1',
-            columnsToChart: 'hive_lbs'
-        })
-        chart1();
-      </script>
-    </td>
-  </tr>
-  <tr>
-    <th colspan=2>
-      <h3>Uptime (minutes)</h3>
-    </th>
-  </tr>
-  <tr>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_0',
-            columnsToChart: 'bot_uptime'
-        })
-        chart1();
-      </script>
-    </td>
-    <td width='50%'>
-      <script>
-        chart1 = lineChart({
-            dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-            groupColumn: 'probeid',
-            groupsToChart: 'HIVE_1',
-            columnsToChart: 'bot_uptime'
-        })
-        chart1();
-      </script>
-    </td>
-  </tr>
-</table>
+    </div>
+    <div class="tabs-panel" id="weight-panel">
+      <div class='row'>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              weightChart1 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_0',
+                  columnsToChart: 'hive_lbs'
+              })
+              weightChart1.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#weight-panel').is(':visible')) {
+                  weightChart1.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              weightChart2 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_1',
+                  columnsToChart: 'hive_lbs'
+              })
+              weightChart2.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#weight-panel').is(':visible')) {
+                  weightChart2.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+      </div>
+      <ul class='legend'>
+        <li class='label ord1st'>lbs</li>
+      </ul>
+    </div>
+    <div class="tabs-panel" id="uptime-panel">
+      <div class='row'>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              uptimeChart1 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_0',
+                  columnsToChart: 'bot_uptime'
+              })
+              uptimeChart1.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#uptime-panel').is(':visible')) {
+                  uptimeChart1.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+        <div class='small-6 columns'>
+          <table class='chart-styling-fixer'><tr><td>
+            <script>
+              uptimeChart2 = lineChart({
+                  dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
+                  groupColumn: 'probeid',
+                  groupsToChart: 'HIVE_1',
+                  columnsToChart: 'bot_uptime'
+              })
+              uptimeChart2.dropAnchor();
+              $('#metric-tabs').on('change.zf.tabs', function() {
+                if($('#uptime-panel').is(':visible')) {
+                  uptimeChart2.render();
+                }
+              });
+            </script>
+          </td></tr></table>
+        </div>
+      </div>
+      <ul class='legend'>
+        <li class='label ord1st'>minutes</li>
+      </ul>
+    </div>
+  </div>
+</div>

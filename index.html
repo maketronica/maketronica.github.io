@@ -2,22 +2,33 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="row index-banner">
+  <div class='small-2 columns'>&nbsp;</div>
+  <div class='small-8 columns'>
+    <h2>Welcome to MakeTronica</h2>
+    <p>a site dedicated to making things, preferably incorporating moving
+       electrons.</p>
+  </div>
+  <div class='small-2 columns'>&nbsp;</div>
+</div>
+<div class="row">
+  <div class='small-1 columns'>&nbsp;</div>
+  <div class='small-10 columns'>
+    <div class='show-for-small-only'>
+      {% for post in site.posts %}
+        {% include_relative index/post_preview.html post=post forloop=forloop columnsPerRow=1 %}
+      {% endfor %}
+    </div>
+    <div class='show-for-medium-only'>
+      {% for post in site.posts %}
+        {% include_relative index/post_preview.html post=post forloop=forloop columnsPerRow=2 %}
+      {% endfor %}
+    </div>
+    <div class='show-for-large'>
+      {% for post in site.posts %}
+        {% include_relative index/post_preview.html post=post forloop=forloop columnsPerRow=3 %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class='small-1 columns'>&nbsp;</div>
 </div>

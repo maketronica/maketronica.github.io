@@ -1,59 +1,59 @@
 ---
 layout: default
 ---
-<div id="main" role="main">
-  <div class="wrap">
-    <div class="post">
+<div class='row'>
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-      <header class="post-header">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-        <a data-pin-do="buttonBookmark" data-pin-tall="true" href="https://www.pinterest.com/pin/create/button/"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_28.png" /></a>
-        <!-- Please call pinit.js only once per page -->
-        <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
-        <a href="https://twitter.com/share" class="twitter-share-button"{count} data-via="maketronica" data-size="large">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-      </header>
-
-      <article class="post-content">
-        {{ content }}
-      </article>
-
-      <script type="text/javascript">
-        amzn_assoc_placement = "adunit0";
-        amzn_assoc_enable_interest_ads = "true";
-        amzn_assoc_tracking_id = "maket07-20";
-        amzn_assoc_ad_mode = "auto";
-        amzn_assoc_ad_type = "smart";
-        amzn_assoc_marketplace = "amazon";
-        amzn_assoc_region = "US";
-        amzn_assoc_linkid = "293f86cdaedf9425a74f8b2a9bcf29e7";
-        amzn_assoc_fallback_mode = {"type":"search","value":"raspberry pi arduino"};
-        amzn_assoc_default_category = "Electronics";
-      </script>
-      <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
-      {% if page.comments %}
-        <div id="disqus_thread"></div>
-        <script>
-        /**
-        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-        */
-        var disqus_config = function () {
-        //  this.page.url = '{{ page.url }}'; // Replace PAGE_URL with your page's canonical URL variable
-          this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-
-        s.src = '//maketronica.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-      {% endif %}
+    <div class='banner-bar'>
+      <h2 itemprop="name headline">{{ page.title }}</h1>
+      <p class='post-meta'><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
     </div>
-  </div>
+
+    <div itemprop="articleBody">
+      {% if page.youtube-embed-id %}
+        <div class='post-video flex-video'>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ page.youtube-embed-id }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+      {% endif %}
+      {{ content }}
+    </div>
+
+    <script type="text/javascript">
+      amzn_assoc_placement = "adunit0";
+      amzn_assoc_enable_interest_ads = "true";
+      amzn_assoc_tracking_id = "maket07-20";
+      amzn_assoc_ad_mode = "auto";
+      amzn_assoc_ad_type = "smart";
+      amzn_assoc_marketplace = "amazon";
+      amzn_assoc_region = "US";
+      amzn_assoc_linkid = "293f86cdaedf9425a74f8b2a9bcf29e7";
+      amzn_assoc_fallback_mode = {"type":"search","value":"{{ page.amazon-keywords | default: 'arduino' }}"};
+      amzn_assoc_default_category = "Electronics";
+    </script>
+
+    <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>
+    {% if page.comments %}
+      <div id="disqus_thread"></div>
+      <script>
+      /**
+      * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+      */
+      var disqus_config = function () {
+        this.page.url = '{{ page.url }}'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{ page.id }}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//maketronica.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    {% endif %}
+
+  </article>
 </div>

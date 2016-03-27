@@ -1,36 +1,18 @@
-# Site wide configuration
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
+# Site settings
 title: MakeTronica
 description: "Make something, preferably incorporating moving electrons."
-logo: logo.jpg # 120x120 px default image used for Twitter summary card
-teaser: teaser.jpg # 400x250 px default teaser image used in image archive grid
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://maketronica.com" # the base hostname & protocol for your site
+permalink: /:title/
 locale: en
-url:
 
-# Jekyll configuration
-
-sass:
-    sass_dir: _sass
-    style: compressed
-permalink: /:categories/:title/
-kramdown:
-  toc_levels: 1..2
-highlighter: pygments
 gems:
   - jekyll-sitemap
-
-
-# Site owner
-owner:
-  name:
-  email:
-  twitter:
-  google:
-    ad-client:
-    ad-slot:
-  bio:
-  avatar: bio-photo.jpg # 160x160 px image for author byline
-  disqus-shortname:
-
-
-exclude: ["lib", "config.rb", ".sass-cache", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "*.sublime-project", "*.sublime-workspace", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "node_modules", "Gruntfile.js", "package.json"]
+markdown: kramdown

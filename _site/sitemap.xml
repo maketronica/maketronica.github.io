@@ -1,50 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/broodbox_sensor_cage/</loc>
+    <loc>http://maketronica.com/broodbox_sensor_cage/</loc>
     <lastmod>2016-03-20T00:00:00-06:00</lastmod>
   </url>
   <url>
-    <loc>/solar-powered-beehives/</loc>
+    <loc>http://maketronica.com/solar-powered-beehives/</loc>
     <lastmod>2016-03-19T00:00:00-06:00</lastmod>
   </url>
   <url>
-    <loc>/hivebot-brain/</loc>
+    <loc>http://maketronica.com/hivebot-brain/</loc>
     <lastmod>2016-03-12T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/3d-printing-rfid-antenna-coil/</loc>
+    <loc>http://maketronica.com/3d-printing-rfid-antenna-coil/</loc>
     <lastmod>2015-12-12T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/increase-arduino-digital-outputs/</loc>
+    <loc>http://maketronica.com/increase-arduino-digital-outputs/</loc>
     <lastmod>2015-12-10T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/holiday-lightshow-glorious-dawn/</loc>
+    <loc>http://maketronica.com/holiday-lightshow-glorious-dawn/</loc>
     <lastmod>2015-12-01T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/calibrating-an-rfid-antenna/</loc>
+    <loc>http://maketronica.com/calibrating-an-rfid-antenna/</loc>
     <lastmod>2015-11-16T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/making-an-rfid-antenna/</loc>
+    <loc>http://maketronica.com/making-an-rfid-antenna/</loc>
     <lastmod>2015-11-10T00:00:00-07:00</lastmod>
   </url>
   <url>
-    <loc>/about/</loc>
+    <loc>http://maketronica.com/about/</loc>
   </url>
   <url>
-    <loc>/hivebot/charts/</loc>
+    <loc>http://maketronica.com/fandbox/</loc>
   </url>
   <url>
-    <loc>/hivebot/</loc>
+    <loc>http://maketronica.com/hivebot/charts/</loc>
   </url>
   <url>
-    <loc>/</loc>
+    <loc>http://maketronica.com/hivebot/</loc>
   </url>
   <url>
-    <loc>/</loc>
+    <loc>http://maketronica.com/</loc>
+  </url>
+  <url>
+    <loc>http://maketronica.com/index/post_preview.html</loc>
+    <lastmod>2016-03-27T10:09:04-06:00</lastmod>
   </url>
 </urlset>

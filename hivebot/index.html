@@ -3,41 +3,49 @@ layout: page
 title: Hivebot
 ---
 <p>
-  The Maketronica Hivebot is a collection of hardware and (predominantely)
-  open-source software installed in the beehive in our back yard, with the
+  The MakeTronica Hivebot is a collection of hardware and (predominantely)
+  open-source software installed in the beehives in our back yard, with the
   purpose of tracking environmental conditions within and around the hives,
   as well as provide instructional material so that others may possibly
   apply some of what I've done to their own beehive, or beer fridge, or
   whatever maker project they have in mind.
 </p>
 
-<h2>Chart</h2>
+<h3>Chart</h3>
 <p>
-  Here's a sample chart of live data coming from the current hivebots (probably
-  installed in the hives, but if the values look way off, one or both may be
-  in my office getting a makeover. Lots more charts available on the
-  <a href='/hivebot/charts'>charts page</a>.
+  Here's a sample chart of some of the live data coming from the current
+  hivebots (probably installed in the hives, but if the values look way off,
+  one or both may be in my office getting a makeover. Lots more charts
+  available on the <a href='/hivebot/charts'>charts page</a>.
 </p>
-<script>
-  chart1 = lineChart({
+<table class='chart-styling-fixer'><tr><td>
+  <!--D3 seems to leave some open tag unclosed or something that messes with
+      the footer on this page, not allowing the bottom border to extend all
+      the way to the edges. Not a huge deal, but moderately frustrating.
+      Magically, though, wrapping the script that generates the chart in a
+      table seems to fix it, so...  whatev's. -->
+  <script>
+    demoChart = lineChart({
       dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
       groupColumn: 'probeid',
       groupsToChart: 'HIVE_0, HIVE_1',
       columnsToChart: 'brood_temp'
-  })
-  chart1();
-</script>
+    })
+    demoChart.dropAnchor();
+    demoChart.render();
+  </script>
+</td></tr></table>
 <ul class='legend'>
-  <li class='ord1st'>Hive 0 Temp</li>
-  <li class='ord2nd'>Hive 1 Temp</li>
+  <li class='label ord1st'>Hive 0 Temp</li>
+  <li class='label ord2nd'>Hive 1 Temp</li>
 </ul>
-<h2>Videos</h2>
+<h3>Videos</h3>
 <p>
   I'll be putting together a bunch of videos detailing the process of setting up
   each of the sensors within the beehives on my 
   <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">MakeTronica YouTube channel</a>.
 </p>
-<h2>Software</h2>
+<h3>Software</h3>
 <p>
   The following is a list of open-source sofware I've written that, as a 
   collection, provides all of the hivebot functionality.
@@ -54,7 +62,7 @@ title: Hivebot
   networking, electronics assembly and soldering (for the sensors),
   troubleshooting, and self-sufficient problem solving.
 </p>
-<h3>hivebot.avr</h3>
+<h4>hivebot.avr</h4>
 <p>
   <a href="https://github.com/maketronica/hivebot.avr">hivebot.avr</a> is the
   code for the Arduino in each hive. The Arduino has several sensors and the
@@ -69,7 +77,7 @@ title: Hivebot
   but that remains to be seen.
 </p>
 
-<h3>hivebot.rb</h3>
+<h4>hivebot.rb</h4>
 <p>
   <a href="https://github.com/maketronica/hivebot.rb">hivebot.rb</a> is the
   Ruby code that runs on a Raspberry Pi in each beehive. It reads data over the
@@ -80,7 +88,7 @@ title: Hivebot
   Each Raspberry Pi is running a recent (as of the time I installed it) version
   of <a href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate.</a>
 </p>
-<h3>hivemom.rb</h3>
+<h4>hivemom.rb</h4>
 <p>
   <a href="https://github.com/maketronica/hivemom.rb">hivemom.rb</a> is the
   Ruby code running on a Pi back in the house. It's a simple HTTP RACK app

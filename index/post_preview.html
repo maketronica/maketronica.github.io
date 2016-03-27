@@ -1,0 +1,19 @@
+{% assign modulo = include.forloop.index | modulo: include.columnsPerRow %}
+{% if modulo == 1 or include.columnsPerRow == 1 %}<div class='row'>{% endif %}
+  <div class='post-preview small-{{ 12 | divided_by: include.columnsPerRow }} columns {% if include.forloop.last %}end{% endif %}'> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>{{ include.post.date | date: "%b %-d, %Y" }}</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/{{ include.post.image.teaser }}">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p>{% if include.post.excerpt %}{{ include.post.excerpt }}{% endif %}</p>
+    </div></div>
+  </div>
+{% if modulo == 0 or include.columnsPerRow == 1 or include.forloop.last %}</div>{% endif %}

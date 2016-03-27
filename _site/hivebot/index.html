@@ -1,205 +1,194 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Hivebot • MakeTronica</title>
-    
-    
-    
-    
-    	<!-- Twitter Cards -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hivebot • MakeTronica</title>
+  <meta name="description" content="Make something, preferably incorporating moving electrons.">
+  
+  	<!-- Twitter Cards -->
 	<meta name="twitter:title" content="Hivebot">
 	
-	
-	
+	<meta name="twitter:site" content="@maketronica">
+	<meta name="twitter:creator" content="@maketronica">
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="/images/logo.jpg">
+	<meta name="twitter:image" content="http://maketronica.com/images/">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Hivebot">
 	
-	<meta property="og:url" content="/hivebot/">
+  <meta property="og:url" content="http://maketronica.com/hivebot/">
 	<meta property="og:site_name" content="MakeTronica">
 
 
-    <link rel="canonical" href="/hivebot/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="/js/foundation.min.js"></script>
+  <script src="/js/main.js"></script>
 
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="MakeTronica Atom Feed">
-    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+  <link rel="stylesheet" href="/css/foundation.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://maketronica.com/hivebot/">
+  <link href="http://maketronica.com/feed.xml" type="application/atom+xml" rel="alternate" title="MakeTronica Atom Feed">
+  <link href="http://maketronica.com/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-    <meta name="google-site-verification" content="ENduajWaRDhD7FI88e8OEQAj2AnShwesAvLdVYfSz4U" />
-
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- HTML5 Shiv and Media Query Support for IE -->
-    <!--[if lt IE 9]>
-      <script src="/js/vendor/html5shiv.min.js"></script>
-      <script src="/js/vendor/respond.min.js"></script>
-    <![endif]-->
-
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/skinnybones.js"></script>
-  </head>
-
-  <body id="js-body">
-    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
-
-    <header id="masthead">
-  <div class="inner-wrap">
-    <a href="/">
-      <img src="/images/logo.jpg" alt="MakeTronica Logo" class="header-logo">
-    </a>
-    <a href="/feed.xml">
-      <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
-    </a>
-    <a href="/" class="site-title">MakeTronica</a>
-    <ul class="social-links">
-      <li>
-        <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
-          <img src="/images/social-links-youtube.png" title="Youtube" alt="Youtube Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://github.com/maketronica">
-          <img src="/images/social-links-github.png" title="Github" alt="Github Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://twitter.com/MakeTronica">
-          <img src="/images/social-links-twitter.png" title="Twitter" alt="Twitter Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.pinterest.com/maketronica/">
-          <img src="/images/social-links-pinterest.png" title="Pinterest" alt="Pinterest Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/maketronica/">
-          <img src="/images/social-links-instagram.png" title="Instagram" alt="Instagram Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
-          <img src="/images/social-links-googleplus.png" title="Google+" alt="Google Plus Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.shapeways.com/shops/maketronica3d">
-          <img src="/images/social-links-shapeways.png" title="Shapeways" alt="Google Plus Logo">
-        </a>
-      </li>
-    </ul>
-    <p> Make something, preferably incorporating moving electrons. </p>
-    <nav role="navigation" class="menu top-menu">
-        <ul class="menu-item">
-	<li class="home"><a href="/">MakeTronica</a></li>
-	
-    
-        
-    
-    <li><a href="/" >Home</a></li>
   
-    
-        
-    
-    <li><a href="/hivebot" >Hivebot</a></li>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   
+
+</head>
+
+  <body>
+    <div id='header-bar'>
+
+  <a href="/feed.xml">
+    <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
+  </a>
+  <a href="/">
+    <img src="/images/logo.jpg" alt="MakeTronica Logo" class="logo">
+  </a>
+  <div class='flag'>
+    <a class="site-title" href="/">MakeTronica</a>
+    <ul class='social-links'>
+  <li>
+    <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
+      <img src="/images/social-links/youtube.png" title="Youtube" alt="Youtube Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://github.com/maketronica">
+      <img src="/images/social-links/github.png" title="Github" alt="Github Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://twitter.com/MakeTronica">
+      <img src="/images/social-links/twitter.png" title="Twitter" alt="Twitter Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.pinterest.com/maketronica/">
+      <img src="/images/social-links/pinterest.png" title="Pinterest" alt="Pinterest Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/maketronica/">
+      <img src="/images/social-links/instagram.png" title="Instagram" alt="Instagram Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
+      <img src="/images/social-links/googleplus.png" title="Google+" alt="Google Plus Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.shapeways.com/shops/maketronica3d">
+      <img src="/images/social-links/shapeways.png" title="Shapeways" alt="Google Plus Logo">
+    </a>
+  </li>
 </ul>
-    </nav>
+
   </div>
-</header>
 
+  <div class='top-bar'>
+    <div class='tob-bar-left'>
+      <ul class='dropdown menu' data-dropdown-menu>
+        <li>
+          <a href='#'>Hivebot</a>
+          <ul class='submenu menu vertical' data-submenu>
+            <li><a href='/hivebot'>Details</a></li>
+            <li><a href='/hivebot/charts'>Charts</a></li>
+          </ul>
+        </li>  
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <div id="page-wrapper">
-      <div id="main" role="main">
-  <div class="wrap">
-    <div class="post">
-
-      <header class="post-header">
-        <h1 class="post-title">Hivebot</h1>
-      </header>
-
-      <article class="post-content">
-        <p>
-  The Maketronica Hivebot is a collection of hardware and (predominantely)
-  open-source software installed in the beehive in our back yard, with the
+    <div class='row'>
+  <div class='small-12'>
+    <h2>Hivebot</h2>
+    <p>
+  The MakeTronica Hivebot is a collection of hardware and (predominantely)
+  open-source software installed in the beehives in our back yard, with the
   purpose of tracking environmental conditions within and around the hives,
   as well as provide instructional material so that others may possibly
   apply some of what I've done to their own beehive, or beer fridge, or
   whatever maker project they have in mind.
 </p>
 
-<h2>Chart</h2>
+<h3>Chart</h3>
 <p>
-  Here's a sample chart of live data coming from the current hivebots (probably
-  installed in the hives, but if the values look way off, one or both may be
-  in my office getting a makeover. Lots more charts available on the
-  <a href='/hivebot/charts'>charts page</a>.
+  Here's a sample chart of some of the live data coming from the current
+  hivebots (probably installed in the hives, but if the values look way off,
+  one or both may be in my office getting a makeover. Lots more charts
+  available on the <a href='/hivebot/charts'>charts page</a>.
 </p>
-<script>
-  chart1 = lineChart({
+<table class='chart-styling-fixer'><tr><td>
+  <!--D3 seems to leave some open tag unclosed or something that messes with
+      the footer on this page, not allowing the bottom border to extend all
+      the way to the edges. Not a huge deal, but moderately frustrating.
+      Magically, though, wrapping the script that generates the chart in a
+      table seems to fix it, so...  whatev's. -->
+  <script>
+    demoChart = lineChart({
       dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
       groupColumn: 'probeid',
       groupsToChart: 'HIVE_0, HIVE_1',
       columnsToChart: 'brood_temp'
-  })
-  chart1();
-</script>
+    })
+    demoChart.dropAnchor();
+    demoChart.render();
+  </script>
+</td></tr></table>
 <ul class='legend'>
-  <li class='ord1st'>Hive 0 Temp</li>
-  <li class='ord2nd'>Hive 1 Temp</li>
+  <li class='label ord1st'>Hive 0 Temp</li>
+  <li class='label ord2nd'>Hive 1 Temp</li>
 </ul>
-<h2>Videos</h2>
+<h3>Videos</h3>
 <p>
   I'll be putting together a bunch of videos detailing the process of setting up
   each of the sensors within the beehives on my 
   <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">MakeTronica YouTube channel</a>.
 </p>
-<h2>Software</h2>
+<h3>Software</h3>
 <p>
   The following is a list of open-source sofware I've written that, as a 
   collection, provides all of the hivebot functionality.
@@ -216,7 +205,7 @@
   networking, electronics assembly and soldering (for the sensors),
   troubleshooting, and self-sufficient problem solving.
 </p>
-<h3>hivebot.avr</h3>
+<h4>hivebot.avr</h4>
 <p>
   <a href="https://github.com/maketronica/hivebot.avr">hivebot.avr</a> is the
   code for the Arduino in each hive. The Arduino has several sensors and the
@@ -231,7 +220,7 @@
   but that remains to be seen.
 </p>
 
-<h3>hivebot.rb</h3>
+<h4>hivebot.rb</h4>
 <p>
   <a href="https://github.com/maketronica/hivebot.rb">hivebot.rb</a> is the
   Ruby code that runs on a Raspberry Pi in each beehive. It reads data over the
@@ -242,7 +231,7 @@
   Each Raspberry Pi is running a recent (as of the time I installed it) version
   of <a href="https://ubuntu-mate.org/raspberry-pi/">Ubuntu Mate.</a>
 </p>
-<h3>hivemom.rb</h3>
+<h4>hivemom.rb</h4>
 <p>
   <a href="https://github.com/maketronica/hivemom.rb">hivemom.rb</a> is the
   Ruby code running on a Pi back in the house. It's a simple HTTP RACK app
@@ -263,38 +252,79 @@
   data.
 </p>
 
-      </article>
-
-    </div>
   </div>
 </div>
 
-      <footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		
-      
-        
-      
-			<li><a href="" ></a></li>
-		
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2016 <a href="">Five Valleys Interactive</a>.</p>
-</footer>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-70791654-2', 'auto');
-    ga('send', 'pageview');
-
-</script>
+    <div id='footer'>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <p class="copyright">&#169; 2016 Five Valleys Interactive, Inc.</p>
+    </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <p>Make something, preferably incorporating moving electrons.</p>
+    </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <ul class='social-links'>
+  <li>
+    <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
+      <img src="/images/social-links/youtube.png" title="Youtube" alt="Youtube Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://github.com/maketronica">
+      <img src="/images/social-links/github.png" title="Github" alt="Github Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://twitter.com/MakeTronica">
+      <img src="/images/social-links/twitter.png" title="Twitter" alt="Twitter Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.pinterest.com/maketronica/">
+      <img src="/images/social-links/pinterest.png" title="Pinterest" alt="Pinterest Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/maketronica/">
+      <img src="/images/social-links/instagram.png" title="Instagram" alt="Instagram Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
+      <img src="/images/social-links/googleplus.png" title="Google+" alt="Google Plus Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.shapeways.com/shops/maketronica3d">
+      <img src="/images/social-links/shapeways.png" title="Shapeways" alt="Google Plus Logo">
+    </a>
+  </li>
+</ul>
 
     </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+</div>
 
+
+    <script>$(document).foundation()</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-70791654-2', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
-
 </html>

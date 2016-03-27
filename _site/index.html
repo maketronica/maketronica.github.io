@@ -1,286 +1,806 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Latest Posts • MakeTronica</title>
-    
-    
-    
-    
-    	<!-- Twitter Cards -->
-	<meta name="twitter:title" content="Latest Posts">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MakeTronica</title>
+  <meta name="description" content="Make something, preferably incorporating moving electrons.">
+  
+  	<!-- Twitter Cards -->
+	<meta name="twitter:title" content="MakeTronica">
 	
-	
-	
+	<meta name="twitter:site" content="@maketronica">
+	<meta name="twitter:creator" content="@maketronica">
 	
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:image" content="/images/logo.jpg">
+	<meta name="twitter:image" content="http://maketronica.com/images/">
 	
 	<!-- Open Graph -->
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Latest Posts">
+	<meta property="og:title" content="MakeTronica">
 	
-	<meta property="og:url" content="/">
+  <meta property="og:url" content="http://maketronica.com/">
 	<meta property="og:site_name" content="MakeTronica">
 
 
-    <link rel="canonical" href="/">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="/js/foundation.min.js"></script>
+  <script src="/js/main.js"></script>
 
-    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="MakeTronica Atom Feed">
-    <link href="/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+  <link rel="stylesheet" href="/css/foundation.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://maketronica.com/">
+  <link href="http://maketronica.com/feed.xml" type="application/atom+xml" rel="alternate" title="MakeTronica Atom Feed">
+  <link href="http://maketronica.com/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
 
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
-    <meta name="google-site-verification" content="ENduajWaRDhD7FI88e8OEQAj2AnShwesAvLdVYfSz4U" />
-
-    <link rel="stylesheet" href="/css/main.css">
-    <!-- HTML5 Shiv and Media Query Support for IE -->
-    <!--[if lt IE 9]>
-      <script src="/js/vendor/html5shiv.min.js"></script>
-      <script src="/js/vendor/respond.min.js"></script>
-    <![endif]-->
-
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/images/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
-    <script src="/js/skinnybones.js"></script>
-  </head>
-
-  <body id="js-body">
-    <!--[if lt IE 9]><div class="upgrade notice-warning"><strong>Your browser is quite old!</strong> Why not <a href="http://whatbrowser.org/">upgrade to a newer one</a> to better enjoy this site?</div><![endif]-->
-
-    <header id="masthead">
-  <div class="inner-wrap">
-    <a href="/">
-      <img src="/images/logo.jpg" alt="MakeTronica Logo" class="header-logo">
-    </a>
-    <a href="/feed.xml">
-      <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
-    </a>
-    <a href="/" class="site-title">MakeTronica</a>
-    <ul class="social-links">
-      <li>
-        <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
-          <img src="/images/social-links-youtube.png" title="Youtube" alt="Youtube Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://github.com/maketronica">
-          <img src="/images/social-links-github.png" title="Github" alt="Github Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://twitter.com/MakeTronica">
-          <img src="/images/social-links-twitter.png" title="Twitter" alt="Twitter Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.pinterest.com/maketronica/">
-          <img src="/images/social-links-pinterest.png" title="Pinterest" alt="Pinterest Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/maketronica/">
-          <img src="/images/social-links-instagram.png" title="Instagram" alt="Instagram Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
-          <img src="/images/social-links-googleplus.png" title="Google+" alt="Google Plus Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.shapeways.com/shops/maketronica3d">
-          <img src="/images/social-links-shapeways.png" title="Shapeways" alt="Google Plus Logo">
-        </a>
-      </li>
-    </ul>
-    <p> Make something, preferably incorporating moving electrons. </p>
-    <nav role="navigation" class="menu top-menu">
-        <ul class="menu-item">
-	<li class="home"><a href="/">MakeTronica</a></li>
-	
-    
-        
-    
-    <li><a href="/" >Home</a></li>
   
-    
-        
-    
-    <li><a href="/hivebot" >Hivebot</a></li>
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/images/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   
+
+</head>
+
+  <body>
+    <div id='header-bar'>
+
+  <a href="/feed.xml">
+    <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
+  </a>
+  <a href="/">
+    <img src="/images/logo.jpg" alt="MakeTronica Logo" class="logo">
+  </a>
+  <div class='flag'>
+    <a class="site-title" href="/">MakeTronica</a>
+    <ul class='social-links'>
+  <li>
+    <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
+      <img src="/images/social-links/youtube.png" title="Youtube" alt="Youtube Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://github.com/maketronica">
+      <img src="/images/social-links/github.png" title="Github" alt="Github Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://twitter.com/MakeTronica">
+      <img src="/images/social-links/twitter.png" title="Twitter" alt="Twitter Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.pinterest.com/maketronica/">
+      <img src="/images/social-links/pinterest.png" title="Pinterest" alt="Pinterest Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/maketronica/">
+      <img src="/images/social-links/instagram.png" title="Instagram" alt="Instagram Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
+      <img src="/images/social-links/googleplus.png" title="Google+" alt="Google Plus Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.shapeways.com/shops/maketronica3d">
+      <img src="/images/social-links/shapeways.png" title="Shapeways" alt="Google Plus Logo">
+    </a>
+  </li>
 </ul>
-    </nav>
+
   </div>
-</header>
 
-
-    <div id="page-wrapper">
-      <div id="main" role="main">			
-	<div class="wrap">
-		
-		<div class="page-title">
-			<h1>Latest Posts</h1>
-			
-		</div>
-		<div class="archive-wrap">
-			<div class="page-content">
-				<div class="tiles">
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/broodbox_sensor_cage/" title="Beehive Temperature and Humidity Sensors" class="post-teaser"><img src="/images/teaser-brood-sensors.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2016-03-20" itemprop="datePublished">March 20, 2016</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/broodbox_sensor_cage/">Beehive Temperature and Humidity Sensors</a></h2>
-  <p class="post-excerpt" itemprop="description">Today I installed another temperature and humidty sensor in the broodbox of our
-beehives. 
-
-</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/solar-powered-beehives/" title="Solar Powered Beehives" class="post-teaser"><img src="/images/teaser-solar-powered-beehives.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2016-03-19" itemprop="datePublished">March 19, 2016</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/solar-powered-beehives/">Solar Powered Beehives</a></h2>
-  <p class="post-excerpt" itemprop="description">Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
-and environmental sensors.
-
-</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/hivebot-brain/" title="Hivebot Brain - Adding first sensors to a beehive" class="post-teaser"><img src="/images/teaser-hivebot-brain.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2016-03-12" itemprop="datePublished">March 12, 2016</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/hivebot-brain/">Hivebot Brain - Adding first sensors to a beehive</a></h2>
-  <p class="post-excerpt" itemprop="description">I’ve been working up to this for a while, and it’s finally coming together,
-and not a moment too soon. The bees will be arriving in a little over a month
-and...</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/3d-printing-rfid-antenna-coil/" title="3D Printing an RFID Antenna Coil Bobbin" class="post-teaser"><img src="/images/teaser-3d-antenna-bobbin.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2015-12-12" itemprop="datePublished">December 12, 2015</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/3d-printing-rfid-antenna-coil/">3D Printing an RFID Antenna Coil Bobbin</a></h2>
-  <p class="post-excerpt" itemprop="description">After figuring out how to create a custom wound RFID antenna for the ID-3LA RFID reader connected to an Arduino, I gave a shot at designing a 3D printable bo...</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/increase-arduino-digital-outputs/" title="Increasing Arduino Digital Outputs" class="post-teaser"><img src="/images/teaser-arduino-outputs.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2015-12-10" itemprop="datePublished">December 10, 2015</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/increase-arduino-digital-outputs/">Increasing Arduino Digital Outputs</a></h2>
-  <p class="post-excerpt" itemprop="description">Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to proces...</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/holiday-lightshow-glorious-dawn/" title="Holiday Lightshow - Glorious Dawn" class="post-teaser"><img src="/images/teaser-lightshow.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2015-12-01" itemprop="datePublished">December 01, 2015</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/holiday-lightshow-glorious-dawn/">Holiday Lightshow - Glorious Dawn</a></h2>
-  <p class="post-excerpt" itemprop="description">This is our holiday lightshow for 2015. I worked on this off and on for the better part of the year, and managed to get to all working just in time for Thank...</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/calibrating-an-rfid-antenna/" title="Calibrating an RFID antenna." class="post-teaser"><img src="/images/teaser-rfid2.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2015-11-16" itemprop="datePublished">November 16, 2015</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/calibrating-an-rfid-antenna/">Calibrating an RFID antenna.</a></h2>
-  <p class="post-excerpt" itemprop="description">If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see my previous post on th...</p>
-</article><!-- /.tile -->
-
-
-	<article class="tile" itemscope="" itemtype="http://schema.org/Article">
-  <a href="/making-an-rfid-antenna/" title="Making an RFID antenna for the ID-3LA reader" class="post-teaser"><img src="/images/rfid1.png" alt="teaser" itemprop="image" />
-    </a>
-  <p class="entry-date date published"><time datetime="2015-11-10" itemprop="datePublished">November 10, 2015</time></p>
-  <h2 class="post-title" itemprop="name"><a href="/making-an-rfid-antenna/">Making an RFID antenna for the ID-3LA reader</a></h2>
-  <p class="post-excerpt" itemprop="description">Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.
-
-</p>
-</article><!-- /.tile -->
-
-
+  <div class='top-bar'>
+    <div class='tob-bar-left'>
+      <ul class='dropdown menu' data-dropdown-menu>
+        <li>
+          <a href='#'>Hivebot</a>
+          <ul class='submenu menu vertical' data-submenu>
+            <li><a href='/hivebot'>Details</a></li>
+            <li><a href='/hivebot/charts'>Charts</a></li>
+          </ul>
+        </li>  
+      </ul>
+    </div>
+  </div>
 </div>
-<!-- /.tiles -->
 
-			</div><!-- /.page-content -->
-		</div class="archive-wrap"><!-- /.archive-wrap -->
-	</div><!-- /.wrap -->
-</div><!-- /#main -->
-      <footer role="contentinfo" id="site-footer">
-	<nav role="navigation" class="menu bottom-menu">
-		<ul class="menu-item">
-		
+    <div class="row index-banner">
+  <div class='small-2 columns'>&nbsp;</div>
+  <div class='small-8 columns'>
+    <h2>Welcome to MakeTronica</h2>
+    <p>a site dedicated to making things, preferably incorporating moving
+       electrons.</p>
+  </div>
+  <div class='small-2 columns'>&nbsp;</div>
+</div>
+<div class="row">
+  <div class='small-1 columns'>&nbsp;</div>
+  <div class='small-10 columns'>
+    <div class='show-for-small-only'>
       
         
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 20, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/broodbox_sensor_cage/">Beehive Temperature and Humidity Sensors</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/brood-sensors.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I installed another temperature and humidty sensor in the broodbox of our
+beehives.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
       
-			<li><a href="" ></a></li>
-		
-		</ul>
-	</nav><!-- /.bottom-menu -->
-	<p class="copyright">&#169; 2016 <a href="">Five Valleys Interactive</a>.</p>
-</footer>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 19, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/solar-powered-beehives/">Solar Powered Beehives</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/solar-powered-beehives.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
+and environmental sensors.</p>
 
-  ga('create', 'UA-70791654-2', 'auto');
-    ga('send', 'pageview');
+</p>
+    </div></div>
+  </div>
+</div>
 
-</script>
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 12, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/hivebot-brain/">Hivebot Brain - Adding first sensors to a beehive</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/hivebot-brain.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>I’ve been working up to this for a while, and it’s finally coming together,
+and not a moment too soon. The bees will be arriving in a little over a month
+and I’ve still got a lot of work to do.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 12, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/3d-printing-rfid-antenna-coil/">3D Printing an RFID Antenna Coil Bobbin</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/3d-antenna-bobbin.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>After figuring out how to create a custom wound RFID antenna for the ID-3LA RFID reader connected to an Arduino, I gave a shot at designing a 3D printable bobbin to wind the antenna onto.  I was hoping for more range than I got, but otherwise, it worked.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/increase-arduino-digital-outputs/">Increasing Arduino Digital Outputs</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/arduino-outputs.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to process of wiring up the chip and writing code to activate the new outputs, and then I daisy chain 5 shift registers together to individually control 40 different digital outputs.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 1, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/holiday-lightshow-glorious-dawn/">Holiday Lightshow - Glorious Dawn</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/lightshow.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>This is our holiday lightshow for 2015. I worked on this off and on for the better part of the year, and managed to get to all working just in time for Thanksgiving.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 16, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/calibrating-an-rfid-antenna/">Calibrating an RFID antenna.</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid2.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see <a href="/making-an-rfid-antenna/">my previous post</a> on the subject.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-12 columns end'> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/making-an-rfid-antenna/">Making an RFID antenna for the ID-3LA reader</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid1.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+    </div>
+    <div class='show-for-medium-only'>
+      
+        
+<div class='row'>
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 20, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/broodbox_sensor_cage/">Beehive Temperature and Humidity Sensors</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/brood-sensors.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I installed another temperature and humidty sensor in the broodbox of our
+beehives.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 19, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/solar-powered-beehives/">Solar Powered Beehives</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/solar-powered-beehives.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
+and environmental sensors.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 12, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/hivebot-brain/">Hivebot Brain - Adding first sensors to a beehive</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/hivebot-brain.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>I’ve been working up to this for a while, and it’s finally coming together,
+and not a moment too soon. The bees will be arriving in a little over a month
+and I’ve still got a lot of work to do.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 12, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/3d-printing-rfid-antenna-coil/">3D Printing an RFID Antenna Coil Bobbin</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/3d-antenna-bobbin.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>After figuring out how to create a custom wound RFID antenna for the ID-3LA RFID reader connected to an Arduino, I gave a shot at designing a 3D printable bobbin to wind the antenna onto.  I was hoping for more range than I got, but otherwise, it worked.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/increase-arduino-digital-outputs/">Increasing Arduino Digital Outputs</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/arduino-outputs.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to process of wiring up the chip and writing code to activate the new outputs, and then I daisy chain 5 shift registers together to individually control 40 different digital outputs.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 1, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/holiday-lightshow-glorious-dawn/">Holiday Lightshow - Glorious Dawn</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/lightshow.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>This is our holiday lightshow for 2015. I worked on this off and on for the better part of the year, and managed to get to all working just in time for Thanksgiving.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-6 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 16, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/calibrating-an-rfid-antenna/">Calibrating an RFID antenna.</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid2.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see <a href="/making-an-rfid-antenna/">my previous post</a> on the subject.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-6 columns end'> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/making-an-rfid-antenna/">Making an RFID antenna for the ID-3LA reader</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid1.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+    </div>
+    <div class='show-for-large'>
+      
+        
+<div class='row'>
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 20, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/broodbox_sensor_cage/">Beehive Temperature and Humidity Sensors</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/brood-sensors.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I installed another temperature and humidty sensor in the broodbox of our
+beehives.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 19, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/solar-powered-beehives/">Solar Powered Beehives</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/solar-powered-beehives.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Today I ran solar power to our two beehives to run the Raspberry Pi’s, Arduinos,
+and environmental sensors.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Mar 12, 2016</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/hivebot-brain/">Hivebot Brain - Adding first sensors to a beehive</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/hivebot-brain.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>I’ve been working up to this for a while, and it’s finally coming together,
+and not a moment too soon. The bees will be arriving in a little over a month
+and I’ve still got a lot of work to do.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 12, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/3d-printing-rfid-antenna-coil/">3D Printing an RFID Antenna Coil Bobbin</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/3d-antenna-bobbin.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>After figuring out how to create a custom wound RFID antenna for the ID-3LA RFID reader connected to an Arduino, I gave a shot at designing a 3D printable bobbin to wind the antenna onto.  I was hoping for more range than I got, but otherwise, it worked.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/increase-arduino-digital-outputs/">Increasing Arduino Digital Outputs</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/arduino-outputs.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to process of wiring up the chip and writing code to activate the new outputs, and then I daisy chain 5 shift registers together to individually control 40 different digital outputs.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Dec 1, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/holiday-lightshow-glorious-dawn/">Holiday Lightshow - Glorious Dawn</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/lightshow.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>This is our holiday lightshow for 2015. I worked on this off and on for the better part of the year, and managed to get to all working just in time for Thanksgiving.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+        
+<div class='row'>
+  <div class='post-preview small-4 columns '> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 16, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/calibrating-an-rfid-antenna/">Calibrating an RFID antenna.</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid2.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see <a href="/making-an-rfid-antenna/">my previous post</a> on the subject.</p>
+
+</p>
+    </div></div>
+  </div>
+
+
+      
+        
+
+  <div class='post-preview small-4 columns end'> 
+    <div class='row'><div class='small-12 columns'>
+      <span class='post-meta'>Nov 10, 2015</span>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <h3>
+        <a href="/making-an-rfid-antenna/">Making an RFID antenna for the ID-3LA reader</a>
+      </h3>
+    </div></div>
+    <div class='row'><div class='small-12 columns'>
+      <img src="/images/teasers/rfid1.png">
+    </div> </div>
+    <div class='row'><div class='small-12 columns'>
+      <p><p>Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.</p>
+
+</p>
+    </div></div>
+  </div>
+</div>
+
+      
+    </div>
+  </div>
+  <div class='small-1 columns'>&nbsp;</div>
+</div>
+
+    <div id='footer'>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <p class="copyright">&#169; 2016 Five Valleys Interactive, Inc.</p>
+    </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <p>Make something, preferably incorporating moving electrons.</p>
+    </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+  <div class='row'>
+    <div class='small-2 columns'>&nbsp;</div>
+    <div class='small-8 columns'>
+      <ul class='social-links'>
+  <li>
+    <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
+      <img src="/images/social-links/youtube.png" title="Youtube" alt="Youtube Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://github.com/maketronica">
+      <img src="/images/social-links/github.png" title="Github" alt="Github Logo">
+    </a>
+  </li>
+  <li>
+    <a href="http://twitter.com/MakeTronica">
+      <img src="/images/social-links/twitter.png" title="Twitter" alt="Twitter Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.pinterest.com/maketronica/">
+      <img src="/images/social-links/pinterest.png" title="Pinterest" alt="Pinterest Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.instagram.com/maketronica/">
+      <img src="/images/social-links/instagram.png" title="Instagram" alt="Instagram Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
+      <img src="/images/social-links/googleplus.png" title="Google+" alt="Google Plus Logo">
+    </a>
+  </li>
+  <li>
+    <a href="https://www.shapeways.com/shops/maketronica3d">
+      <img src="/images/social-links/shapeways.png" title="Shapeways" alt="Google Plus Logo">
+    </a>
+  </li>
+</ul>
 
     </div>
+    <div class='small-2 columns'>&nbsp;</div>
+  </div>
+</div>
 
+
+    <script>$(document).foundation()</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-70791654-2', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
-
 </html>

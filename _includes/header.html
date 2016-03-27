@@ -1,52 +1,27 @@
-<header id="masthead">
-  <div class="inner-wrap">
-    <a href="{{ site.url }}/">
-      <img src="/images/logo.jpg" alt="MakeTronica Logo" class="header-logo">
-    </a>
-    <a href="{{ site.url }}/feed.xml">
-      <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
-    </a>
-    <a href="{{ site.url }}/" class="site-title">{{ site.title }}</a>
-    <ul class="social-links">
-      <li>
-        <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">
-          <img src="/images/social-links-youtube.png" title="Youtube" alt="Youtube Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://github.com/maketronica">
-          <img src="/images/social-links-github.png" title="Github" alt="Github Logo">
-        </a>
-      </li>
-      <li>
-        <a href="http://twitter.com/MakeTronica">
-          <img src="/images/social-links-twitter.png" title="Twitter" alt="Twitter Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.pinterest.com/maketronica/">
-          <img src="/images/social-links-pinterest.png" title="Pinterest" alt="Pinterest Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/maketronica/">
-          <img src="/images/social-links-instagram.png" title="Instagram" alt="Instagram Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://plus.google.com/u/2/b/101023430324318366883/101023430324318366883/posts">
-          <img src="/images/social-links-googleplus.png" title="Google+" alt="Google Plus Logo">
-        </a>
-      </li>
-      <li>
-        <a href="https://www.shapeways.com/shops/maketronica3d">
-          <img src="/images/social-links-shapeways.png" title="Shapeways" alt="Google Plus Logo">
-        </a>
-      </li>
-    </ul>
-    <p> {{ site.description }} </p>
-    <nav role="navigation" class="menu top-menu">
-        {% include navigation.html %}
-    </nav>
+<div id='header-bar'>
+
+  <a href="/feed.xml">
+    <img src="/images/rss-icon.png" alt="RSS Feed" title="RSS Feed" class="rss-logo">
+  </a>
+  <a href="{{ site.baseurl }}/">
+    <img src="/images/logo.jpg" alt="MakeTronica Logo" class="logo">
+  </a>
+  <div class='flag'>
+    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    {% include social_links.html %}
   </div>
-</header>
+
+  <div class='top-bar'>
+    <div class='tob-bar-left'>
+      <ul class='dropdown menu' data-dropdown-menu>
+        <li>
+          <a href='#'>Hivebot</a>
+          <ul class='submenu menu vertical' data-submenu>
+            <li><a href='/hivebot'>Details</a></li>
+            <li><a href='/hivebot/charts'>Charts</a></li>
+          </ul>
+        </li>  
+      </ul>
+    </div>
+  </div>
+</div>

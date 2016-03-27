@@ -4,17 +4,14 @@ title:  "Calibrating an RFID antenna."
 date:   2015-11-16
 comments: true
 image:
-  teaser: teaser-rfid2.png
-  feature: teaser-rfid2.png
-categories: #These aren't tags. They make sub folders in the url (so then if you reorganized the categories, all the urls will change! (bad)).  need to figure out tags instead.
+  teaser: rfid2.png
 seo_keywords: rfid antenna coil oscilliscope calibrate ID-3LA ID3LA arduino
 seo_description: How to calibrate a custom RFID antenna for the ID-3LA reader connected to an Arduino.
-
+youtube-embed-id: nPKfv6anwIs
+amazon-keywords: arduino rfid antenna
 ---
 
 If you have access to an oscilloscope, calibrating an RFID antenna is pretty easy.  To find out how to make an RFID antenna first, see [my previous post]({% post_url 2015-11-10-making-an-rfid-antenna %}) on the subject.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nPKfv6anwIs" frameborder="0" allowfullscreen></iframe>
 
 I wound up another RFID antenna like I did in the previous post, but this time I skipped the part where I took it off the PVC pipe.
 

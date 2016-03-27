@@ -4,11 +4,10 @@ title:  "Increasing Arduino Digital Outputs"
 date:   2015-12-10
 comments: true
 image:
-  teaser: teaser-arduino-outputs.png #400x240 pixels
-  feature: teaser-arduino-outputs.png #used by twitter meta tags
+  teaser: arduino-outputs.png #400x240 pixels
 seo_keywords: arduino digital outputs shift register 74HC595 
 seo_description: Easily and massively increasing the number of digital outputs on your arduino.
-
+amazon-keywords: arduino 74HC595
 ---
 
 Increasing the number of digital outputs on an Arduino, on a massive scale, is a lot easier than you might think.  In these two videos I go through to process of wiring up the chip and writing code to activate the new outputs, and then I daisy chain 5 shift registers together to individually control 40 different digital outputs.

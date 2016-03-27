@@ -1,0 +1,87 @@
+div#chart { font: 14px Arial;}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.ord1st { stroke: red; color: red; }
+.ord2nd { stroke: orange; color: orange  }
+.ord3rd { stroke: green; color: green }
+.ord4th { stroke: blue; color: blue }
+.ord5th { stroke: indigo; color: indigo }
+.ord6th { stroke: violet; color: violet }
+
+text.ord1st { fill: red; }
+text.ord2nd { fill: orange; }
+text.ord3rd { fill: green; }
+text.ord4th { fill: blue; }
+text.ord5th { fill: indigo; }
+text.ord6th { fill: violet; }
+
+.legend {
+  text-align: center;
+  .label { color: black; }
+  .ord1st { background-color: red; }
+  .ord2nd { background-color: orange; }
+  .ord3rd { background-color: green; }
+  .ord4th { background-color: blue; }
+  .ord5th { background-color: indigo; }
+  .ord6th { background-color: violet; }
+}
+
+ul.legend li {
+  display: inline;
+  margin: 1em;
+}
+
+#temperature-chart {
+  width: 800px;
+  height: 400px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+table.chart-styling-fixer {
+  tr {
+    background-color: $color-primary-light;
+    border: 1px solid $color-primary-light;
+  }
+}
+
+#charts {
+  border: 2px solid $color-secondary-darker;
+  
+  ul.tabs {
+    border: 1px solid $color-secondary-darker;
+    background-color: $color-secondary-dark;
+    li.tabs-title a { 
+      color: $color-secondary-lighter;
+    }
+    li.tabs-title.is-active a {
+      background-color: $color-secondary-light;
+      color: $color-secondary-dark;
+    }
+    li.tabs-title:hover a {
+      background-color: $color-secondary-lighter;
+      color: $color-secondary-darker;
+    }
+  }
+
+  .hive-id { 
+    padding-left: 1em;
+  } 
+
+  .tabs-content {
+    border: 0px;
+    background-color: $color-secondary-dark;
+  }
+}
+ 

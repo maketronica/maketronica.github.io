@@ -1,0 +1,20 @@
+.post-meta {
+  color: $color-secondary-dark;
+}
+
+.post-preview {
+  h3 { font-size: 22px; height: 3em; }
+  margin-bottom: 3em;
+}
+
+article.post {
+  margin: 3em;
+  .banner-bar {
+    h2 { font-size: 38px; }
+    margin-bottom: 3em;
+  }
+}
+
+.post-video {
+  float: right;
+}
