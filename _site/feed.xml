@@ -5,14 +5,14 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>http://maketronica.com/</link>
     <atom:link href="http://maketronica.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Mar 2016 16:41:11 -0600</pubDate>
-    <lastBuildDate>Sun, 27 Mar 2016 16:41:11 -0600</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Fri, 01 Apr 2016 00:00:07 -0600</pubDate>
+    <lastBuildDate>Fri, 01 Apr 2016 00:00:07 -0600</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Beehive Temperature and Humidity Sensors</title>
         <description>&lt;p&gt;Today I installed another temperature and humidty sensor in the broodbox of our
-beehives.&lt;/p&gt;
+beehives. &lt;/p&gt;
 
 &lt;p&gt;I created a cage out of 1/8” wire mesh (to protect the sensor from propolis)
 and installed it into one of the hive frames.  This makes it easy to remove for
@@ -90,12 +90,12 @@ to keep the core electronics in.&lt;/p&gt;
 
 &lt;p&gt;Then I inserted some 1/8” wire mesh into the bottom of the box to allow airflow
 but to keep the bees out of the electronics.  I don’t want them coating the
-Raspberry Pi and Arduino in propolis.&lt;/p&gt;
+Raspberry Pi and Arduino in propolis.  &lt;/p&gt;
 
 &lt;p&gt;For now, I’m putting the first temperature and humidity sensor on a breadboard
 while I’m still figuring out how I want everything placed.&lt;/p&gt;
 
-&lt;p&gt;Parts List:&lt;/p&gt;
+&lt;p&gt;Parts List: &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://amzn.to/1LwoMmE&quot;&gt;1/8” Wire Mesh Screen&lt;/a&gt;&lt;/li&gt;
@@ -237,8 +237,8 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/rfid-schematic1.png&quot; alt=&quot;Schematic Diagram&quot; /&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;SoftwareSerial.h&amp;gt;
-&lt;/span&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;SoftwareSerial.h&amp;gt;&lt;/span&gt;
+
 &lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
@@ -246,11 +246,11 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Ready&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Ready&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
   
   &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
@@ -262,7 +262,7 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
      &lt;span class=&quot;n&quot;&gt;tone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;262&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
      &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Lastly, I tested the antenna with an RFID keycard and a small RFID keyfob.  The antenna was able to detect the keyfob from about 2 inches away, and the card from about 3 inches.&lt;/p&gt;
 
@@ -272,9 +272,9 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
 
 &lt;p&gt;One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.&lt;/p&gt;
 
-&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
 
-&lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.&lt;/p&gt;
+&lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  &lt;/p&gt;
 
 &lt;p&gt;If you’ve figured out any other tricks to make this even easier, or more precise, please post a comment below.&lt;/p&gt;
 

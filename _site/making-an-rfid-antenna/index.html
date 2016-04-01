@@ -195,8 +195,8 @@
 
 <p><img src="/images/rfid-schematic1.png" alt="Schematic Diagram" /></p>
 
-<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;SoftwareSerial.h&gt;
-</span>
+<div class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="cp">#include &lt;SoftwareSerial.h&gt;</span>
+
 <span class="n">SoftwareSerial</span> <span class="n">rfid</span> <span class="o">=</span> <span class="n">SoftwareSerial</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
 <span class="n">String</span> <span class="n">msg</span><span class="p">;</span>
 
@@ -204,11 +204,11 @@
 <span class="p">{</span>
   <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
   <span class="n">rfid</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
-  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">"Ready"</span><span class="p">);</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Ready&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 
-<span class="kt">void</span> <span class="n">loop</span><span class="p">(){</span>
-  <span class="n">msg</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">(){</span>
+  <span class="n">msg</span> <span class="o">=</span> <span class="s">&quot;&quot;</span><span class="p">;</span>
   
   <span class="k">while</span><span class="p">(</span><span class="n">rfid</span><span class="p">.</span><span class="n">available</span><span class="p">()</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">msg</span> <span class="o">+=</span> <span class="kt">char</span><span class="p">(</span><span class="n">rfid</span><span class="p">.</span><span class="n">read</span><span class="p">());</span>
@@ -220,7 +220,7 @@
      <span class="n">tone</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">262</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
      <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">msg</span><span class="p">);</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span></code></pre></div>
 
 <p>Lastly, I tested the antenna with an RFID keycard and a small RFID keyfob.  The antenna was able to detect the keyfob from about 2 inches away, and the card from about 3 inches.</p>
 
@@ -230,9 +230,9 @@
 
 <p>One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.</p>
 
-<p>Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process <a href="/calibrating-an-rfid-antenna/">in a future post</a>. You might have access to one at school or <a href="http://spaces.makerspace.com/makerspace-directory">your local Makerspace</a>.</p>
+<p>Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process <a href="/calibrating-an-rfid-antenna/">in a future post</a>. You might have access to one at school or <a href="http://spaces.makerspace.com/makerspace-directory">your local Makerspace</a>. </p>
 
-<p>Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.</p>
+<p>Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  </p>
 
 <p>If you’ve figured out any other tricks to make this even easier, or more precise, please post a comment below.</p>
 
