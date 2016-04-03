@@ -29,7 +29,7 @@ has wires hanging out of the beehive.
 Then I connected the signal wire to the Arduino in the electronics box, and
 wired the 5 volt and ground wires into the junction box beneath the hive.
 
-Live charts of sensor data available on the [charts page](/hivebot/charts).
+Live charts of sensor data available on the [Hivebot page](/hivebot).
 
 Parts List:
 

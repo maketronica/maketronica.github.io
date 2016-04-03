@@ -5,8 +5,8 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>http://maketronica.com/</link>
     <atom:link href="http://maketronica.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Apr 2016 15:27:20 -0600</pubDate>
-    <lastBuildDate>Sun, 03 Apr 2016 15:27:20 -0600</lastBuildDate>
+    <pubDate>Sun, 03 Apr 2016 15:27:53 -0600</pubDate>
+    <lastBuildDate>Sun, 03 Apr 2016 15:27:53 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -227,7 +227,7 @@ has wires hanging out of the beehive.&lt;/p&gt;
 &lt;p&gt;Then I connected the signal wire to the Arduino in the electronics box, and
 wired the 5 volt and ground wires into the junction box beneath the hive.&lt;/p&gt;
 
-&lt;p&gt;Live charts of sensor data available on the &lt;a href=&quot;/hivebot/charts&quot;&gt;charts page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Live charts of sensor data available on the &lt;a href=&quot;/hivebot&quot;&gt;Hivebot page&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Parts List:&lt;/p&gt;
 
