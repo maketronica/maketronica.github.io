@@ -7,6 +7,7 @@ image:
   teaser: scale.png #400x240 pixels
 seo_keywords: beehive, load cell, weight, arduino, raspberry pi
 seo_description: Building an electronic scale to constantly monitor the weight of a beehive. 
+youtube-embed-id: UX97ARNIvW0 
 amazon-keywords: load cell hx711 arduino
 ---
 
