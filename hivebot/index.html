@@ -11,37 +11,12 @@ title: Hivebot
   whatever maker project they have in mind.
 </p>
 
-<h3>Chart</h3>
-<p>
-  Here's a sample chart of some of the live data coming from the current
-  hivebots (probably installed in the hives, but if the values look way off,
-  one or both may be in my office getting a makeover. Lots more charts
-  available on the <a href='/hivebot/charts'>charts page</a>.
-</p>
-<table class='chart-styling-fixer'><tr><td>
-  <!--D3 seems to leave some open tag unclosed or something that messes with
-      the footer on this page, not allowing the bottom border to extend all
-      the way to the edges. Not a huge deal, but moderately frustrating.
-      Magically, though, wrapping the script that generates the chart in a
-      table seems to fix it, so...  whatev's. -->
-  <script>
-    demoChart = lineChart({
-      dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/data.csv",
-      groupColumn: 'probeid',
-      groupsToChart: 'HIVE_0, HIVE_1',
-      columnsToChart: 'brood_temp'
-    })
-    demoChart.dropAnchor();
-    demoChart.render();
-  </script>
-</td></tr></table>
-<ul class='legend'>
-  <li class='label ord1st'>Hive 0 Temp</li>
-  <li class='label ord2nd'>Hive 1 Temp</li>
-</ul>
+<h3>Charts</h3>
+{% include_relative _charts.html %}
+
 <h3>Videos</h3>
 <p>
-  I'll be putting together a bunch of videos detailing the process of setting up
+  I've posted a bunch of videos detailing the process of setting up
   each of the sensors within the beehives on my 
   <a href="https://www.youtube.com/channel/UCulAke49TbCNr6xI16g8dBQ">MakeTronica YouTube channel</a>.
 </p>
