@@ -5,9 +5,93 @@
     <description>Make something, preferably incorporating moving electrons.</description>
     <link>http://maketronica.com/</link>
     <atom:link href="http://maketronica.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 12 Apr 2016 23:17:43 -0600</pubDate>
-    <lastBuildDate>Tue, 12 Apr 2016 23:17:43 -0600</lastBuildDate>
+    <pubDate>Fri, 29 Apr 2016 07:50:53 -0600</pubDate>
+    <lastBuildDate>Fri, 29 Apr 2016 07:50:53 -0600</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Solar Powered Beehives, Take 2</title>
+        <description>&lt;p&gt;I’m made a major modification to the power I’m running to the electronic sensors in our 2 beehives.&lt;/p&gt;
+
+&lt;p&gt;When I originally ran power to each of the hives, I ran everything off of a single USB port on the solar charge controller. I was concerned at the time that that might not be sufficient to power two Raspberry Pis, two Arduinos, and all of the sensors I’m hooking up. That appears to be true as I’ve been having trouble keeping everything running consistently for long periods of time.  So, I made some significant changes.&lt;/p&gt;
+
+&lt;p&gt;Parts List:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1VWIDzl&quot;&gt;Solar Starter Kit&lt;/a&gt; (The exact one I used isn’t available anymore, but this appears to be a good alternative.)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1VWIRX1&quot;&gt;Deep Cycle Battery Valve&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1VWJjVm&quot;&gt;Switching Regulator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/22uxBkX&quot;&gt;Low Voltage Outdoor Lighting Wire&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzAEN&quot;&gt;Terminal Block&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXLqJ2&quot;&gt;Terminal Block Jumpers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzSeO&quot;&gt;Junction Box&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrzVr5&quot;&gt;Micro USB Cables&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;====================&lt;/p&gt;
+
+&lt;p&gt;The solar charge controller provides 12 volts, but the Raspberry Pis and Arduinios all require 5 volts.  There are lots of different ways to step voltage from 12 volts down to 5, and the most popular for this type of project would probably be a 7805 voltage regulator, which can usually be found online for around 50 - 60 cents each, plus shipping.  The downside to using 7805s is that, to do the job, they use a fair amount of extra energy.  Often this isn’t a big deal, but if you’re trying to run off of a battery or solar power (as I am), then it can be a big problem.&lt;/p&gt;
+
+&lt;p&gt;Switching regulators, such as these, accomplish their task in a completely different way than the 7805s and don’t use nearly as much energy.  Switching regulators come in lots of different styles, but what I particularly like about these is that they’re specifically designed to be a drop in replacement for the 7805s. If you’re used to using 7805s, then you can probably switch to these without making any changes to your circuit, much less learning about a whole new component.  The downside, however, is that instead of costing 50 cents, these particular switching regulators currently cost $12-14 apiece.&lt;/p&gt;
+
+&lt;p&gt;To begin, I disconnected a bunch of what I’d done in the previous video to try to start with a bit of a clean slate.  I left the junction boxes under each hive in place as they won’t really be changing.  I’ll be running 12 volts instead of just 5 through each one, but most of the wiring will be identical.&lt;/p&gt;
+
+&lt;p&gt;Next I brought in a new storage locker to keep the solar charge controller and battery in.  I felt like this looks better than the tub I was using, and it’ll definitely do a better job of protecting the contents from the weather.&lt;/p&gt;
+
+&lt;p&gt;Next I drilled a hole in the handle from the inside in such a way as to protect it from rain getting in.  There were already some small ventilation holes nearby, so I figured it was as good a spot as any.&lt;/p&gt;
+
+&lt;p&gt;Then I ran the cable from the solar panels though the hole from outside the box.&lt;/p&gt;
+
+&lt;p&gt;Next I took the cable from the first junction box that used to plug into the USB port on the solar charge controller, cut off the USB connector, and then drilled another hole in the locker to run that cable through.&lt;/p&gt;
+
+&lt;p&gt;The solar charge controller has three places to connect to on the bottom.  One for the solar panels themselves, one for the battery, and the last one is for the load.&lt;/p&gt;
+
+&lt;p&gt;Only one of the two wires on the cable I’m using has writing on it, and since I need to maintain consistent polarity throughout the circuit, I had earlier decided arbitrarily to use the writing on the cable as a guide to which wire would be positive (the one without writing), and which would be negative or ground (the one with writing).&lt;/p&gt;
+
+&lt;p&gt;I stripped the ends of the cable coming from the hive junction box and attached it as the load, being careful to match up the wire with writing on it to the negative terminal.&lt;/p&gt;
+
+&lt;p&gt;Then I went back to the first junction box and disconnected the wire that I’d previously run up to the first hive.  This cable currently has a micro USB connector attached to the other end to plug into the Raspberry Pi.  But now I’m going to be running 12 volts through here, so instead this cable will need to run to one of the switching regulators, instead of directly to the Pi.&lt;/p&gt;
+
+&lt;p&gt;I took the cable into my office and cut the USB connector off, identified which wire had writing on it, and soldered a black 22 gauge solid wire to the end, and shrunk some heat-shrink tubing around the solder joint.  This wire is the right size to plug directly into the breadboard inside the electronics box.  Then I did the same thing with a red wire for the positive side (the wire without writing on it).  Finally, I shrunk a larger piece of heat-shrink tubing around the entire thing, just for good measure.&lt;/p&gt;
+
+&lt;p&gt;Then I went back out to the junction box to re-connect the cable, once again, making sure to match wires with writing on them, to wires with writing on them, and visa versa.  In the earlier version of this project, I’d already attached the terminal block jumpers in such a way that half of the terminal block could all be wired to positive, and the other half to negative, giving me plenty of options to distribute power wherever I may need it.&lt;/p&gt;
+
+&lt;p&gt;Next, I went into the electronics box for the first hive, and plugged one of the switching regulators into the breadboard.  Then I plugged a 22 gauge black wire into the breadboard next to the center pin, and a red wire next to the left most pin.  These will carry ground and 5 volts over to the Arduino and all of the sensors.&lt;/p&gt;
+
+&lt;p&gt;Then I connected the male end of black and red male/female jumpers next to the same pins.  These will carry ground and 5 volts to corresponding GPIO pins on the Raspberry Pi.   Keep in mind though that powering the Raspberry Pi through the GPIO pins like this bypasses circuit protections that are built into the Pi, but I’ll fix that in just a moment.&lt;/p&gt;
+
+&lt;p&gt;Then I was finally able to connect the wire coming up from the junction box.  First I attached the black ground wire to the middle pin on the regulator, and then attached the red wire, which will be carrying 12 volts, to the left most pin. &lt;/p&gt;
+
+&lt;p&gt;Next I went back to the locker and hooked up the battery to the charge controller.  &lt;/p&gt;
+
+&lt;p&gt;Then I needed to connect the solar panels.  Unfortunately, both of the cables coming from the panels were black, so there was no visible cue as to which was positive, and which was negative.  So, I grabbed my multimeter and measured across the two wires.  If I got a positive voltage, then I knew I had them right.  If I got a negative voltage, then I knew they were backward.  Easy-peasy.&lt;/p&gt;
+
+&lt;p&gt;Once I knew which was which, I connected them to the solar charge controller as well.&lt;/p&gt;
+
+&lt;p&gt;And that seems to have solved my power issues. Everything has been running much more reliably since made this change.&lt;/p&gt;
+
+&lt;p&gt;I ran a test to find out how long the hives could last on just battery power by disconnecting the solar panels from the charge controller.  I got a little over two days of power out of the battery.  &lt;/p&gt;
+
+&lt;p&gt;However, right when I was ready to plug things back in and charge the battery back up, the weather got cloudy and rainy for a week, and it wasn’t charging up enough during the day to last all night. This causes me concern that the solar panels and battery won’t be able to keep things running 24 - 7 through the winter, when we have very short days and tend to have lots of clouds to boot.&lt;/p&gt;
+
+&lt;p&gt;To get the battery back up to full capacity for the time being, I ran a long extension cord from the hour out to the hives and plugged in our trickle charger for our car batteries and connected that up to the battery along with the solar charge controller.  That got things back to normal until the weather improves.&lt;/p&gt;
+
+&lt;p&gt;I still had one more small change I wanted to to make in the hives though, just for safety’s sake.&lt;/p&gt;
+
+&lt;p&gt;You’ll recall that I ran 5 volts and ground directly to the GPIO pins on the Raspberry Pi, and that I mentioned that doing so bypasses the circuit protections built into the Pi.  Well, I realized that I still had the micro-usb ends of the USB cables that I’d cut up for the earlier version.&lt;/p&gt;
+
+&lt;p&gt;So, once again, I exposed the red and black wires from the cut end of the cable.  I’ll only be using this for power still, so I don’t care about the other wires.  I soldered up two 22 gauge wires, matching the colors, and protected the joints with a couple layers of heatshrink tubing.&lt;/p&gt;
+
+&lt;p&gt;Then I disconnected the 12 volt line coming into the switching regulator,  replaced the two jumpers going from the 5 volt and ground pins on the switching regulator to the GPIO pins with the new cable, this time plugging the other end into the micro-usb port on the Raspberry Pi, and then reconnected the 12 volt line.  This allows the Raspberry Pi’s built in voltage protections to feel needed and appreciated once again, and we all like to feel needed and appreciated.&lt;/p&gt;
+
+&lt;p&gt;There are still a few more things I want to add to the beehives, including ambient temperature and humidity sensors, and cameras and microphones inside the hives, among other things. Oh, and of course, bees. &lt;/p&gt;
+</description>
+        <pubDate>Fri, 29 Apr 2016 00:00:00 -0600</pubDate>
+        <link>http://maketronica.com/solar-powered-beehives-take-2/</link>
+        <guid isPermaLink="true">http://maketronica.com/solar-powered-beehives-take-2/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Beehive Automatic Water Supply</title>
@@ -467,94 +551,6 @@ while I’m still figuring out how I want everything placed.&lt;/p&gt;
         <pubDate>Mon, 16 Nov 2015 00:00:00 -0700</pubDate>
         <link>http://maketronica.com/calibrating-an-rfid-antenna/</link>
         <guid isPermaLink="true">http://maketronica.com/calibrating-an-rfid-antenna/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Making an RFID antenna for the ID-3LA reader</title>
-        <description>&lt;p&gt;Making an antenna for the ID-3LA RFID chip is surprisingly easy.  Here I demonstrate how I did it.  I hope it helps with your RFID project.&lt;/p&gt;
-
-&lt;p&gt;Parts List:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrCdX6&quot;&gt;Magnet Wire&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXOJzP&quot;&gt;Breadboard&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1nXOMvL&quot;&gt;Sainsmart UNO R3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.sparkfun.com/products/11862&quot;&gt;ID-3LA RFID Chip&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amzn.to/1RrF0Qj&quot;&gt;RFID Cards&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://amzn.to/22uDUVK&quot;&gt;RFID Keyfobs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;For starters, I grabbed a scrap piece of PVC pipe from the garage. This was about the right diameter for my first test antenna.&lt;/p&gt;
-
-&lt;p&gt;I used a ruler to measure the exact outside diameter of the pipe. Since I’ll be wrapping the magnet wire around the pipe, then this will be the inside diameter of my antenna.&lt;/p&gt;
-
-&lt;p&gt;I added a couple rubber bands to the very end of the pipe to create a tiny lip the prevent the wire from slipping off the end of the pipe while I was winding it.&lt;/p&gt;
-
-&lt;p&gt;I unwound some of the magnet wire and taped it to the pipe to hold it in place.&lt;/p&gt;
-
-&lt;p&gt;To determine how many times I needed to wind the wire around the pipe, I used &lt;a href=&quot;http://www.circuits.dk/calculator_multi_layer_aircore.htm&quot;&gt;this online calculator&lt;/a&gt; for air core inductors.  I entered 1.337mH for the inductance (per the &lt;a href=&quot;http://www.id-innovations.com/httpdocs/ID-3LA,ID-12LA,ID-20LA.pdf&quot;&gt;datasheet&lt;/a&gt;), and 60mm for the inner diameter (as measured on the pipe).&lt;/p&gt;
-
-&lt;p&gt;I guessed that I would be able to keep my coil about 4mm long (or wide depending on how you look at it). Changing this measurement in the calculator doesn’t change the number of turns very much. If you’re going to calibrate the antenna at the end, this value is even less important. 4mm is a pretty safe guess to just get us in the right ballpark.&lt;/p&gt;
-
-&lt;p&gt;Finally, I entered 30AWG for the wire guage, as this was the guage of the magent wire I was using.  You should obviously enter whatever guage you’re using.&lt;/p&gt;
-
-&lt;p&gt;The calculator then said that I needed to wrap the wire around the pipe 108 times, so that’s what I did.&lt;/p&gt;
-
-&lt;p&gt;Next I took the antenna off the pipe (don’t do this if you’re still planning to tune it), burned the insulation off each end of the wire coming out of the antenna coil, and soldered on a couple short lengths of 24AWG wires that fit better into a breadboard.&lt;/p&gt;
-
-&lt;p&gt;Then I plugged the antenna wires into a breadboard that I already had the ID-3LA wired to an arduino, and loaded with some code for testing.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/rfid-schematic1.png&quot; alt=&quot;Schematic Diagram&quot; /&gt;&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c--&quot; data-lang=&quot;c++&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;SoftwareSerial.h&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;SoftwareSerial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9600&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;Ready&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;available&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rfid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;());&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;delay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;substring&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;tone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;262&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-     &lt;span class=&quot;n&quot;&gt;Serial&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Lastly, I tested the antenna with an RFID keycard and a small RFID keyfob.  The antenna was able to detect the keyfob from about 2 inches away, and the card from about 3 inches.&lt;/p&gt;
-
-&lt;p&gt;Admittedly, this was a pretty quick and sloppy RFID antenna. Better range is probably possible with a tighter and more precisely wound coil.&lt;/p&gt;
-
-&lt;p&gt;I didn’t tune this antenna at all, and that could probably help with range.&lt;/p&gt;
-
-&lt;p&gt;One possible way to tune it without any special tools would simply be to slowly add or remove turns in small increments while retesting your range with the keyfob until you get the precise number of turns necessary to get the best range.  This sounds pretty tedious though, so I didn’t bother.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, if you have access to an oscilloscope, that could be used to get a much more precise calibration. I’ll go over that process &lt;a href=&quot;/calibrating-an-rfid-antenna/&quot;&gt;in a future post&lt;/a&gt;. You might have access to one at school or &lt;a href=&quot;http://spaces.makerspace.com/makerspace-directory&quot;&gt;your local Makerspace&lt;/a&gt;. &lt;/p&gt;
-
-&lt;p&gt;Another factor that determines range is the diameter of the coil. Bigger coils should get more range, and the ID-3LA datasheet suggests a maximum diameter of 15cm (150mm), more than twice the size of the coil I made.  &lt;/p&gt;
-
-&lt;p&gt;If you’ve figured out any other tricks to make this even easier, or more precise, please post a comment below.&lt;/p&gt;
-
-&lt;p&gt;Good Luck!&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 10 Nov 2015 00:00:00 -0700</pubDate>
-        <link>http://maketronica.com/making-an-rfid-antenna/</link>
-        <guid isPermaLink="true">http://maketronica.com/making-an-rfid-antenna/</guid>
         
         
       </item>

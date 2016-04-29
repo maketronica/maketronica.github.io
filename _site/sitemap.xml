@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://maketronica.com/solar-powered-beehives-take-2/</loc>
+    <lastmod>2016-04-29T00:00:00-06:00</lastmod>
+  </url>
+  <url>
     <loc>http://maketronica.com/beehive-automatic-water-supply/</loc>
     <lastmod>2016-04-12T00:00:00-06:00</lastmod>
   </url>
@@ -44,10 +48,10 @@
     <loc>http://maketronica.com/about/</loc>
   </url>
   <url>
-    <loc>http://maketronica.com/fandbox/</loc>
+    <loc>http://maketronica.com/hivebot/</loc>
   </url>
   <url>
-    <loc>http://maketronica.com/hivebot/</loc>
+    <loc>http://maketronica.com/fandbox/</loc>
   </url>
   <url>
     <loc>http://maketronica.com/</loc>
