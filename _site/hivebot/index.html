@@ -169,7 +169,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/instant_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_temp, brood_temp',
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp',
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -183,7 +183,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/instant_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_temp, brood_temp'
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp'
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -199,7 +199,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/15_minutes_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_temp, brood_temp',
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp',
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -213,7 +213,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/15_minutes_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_temp, brood_temp'
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp'
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -229,7 +229,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_hour_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_temp, brood_temp',
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp',
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -243,7 +243,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_hour_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_temp, brood_temp'
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp'
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -259,7 +259,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_day_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_temp, brood_temp',
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp',
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -273,7 +273,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_day_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_temp, brood_temp'
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp'
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -289,7 +289,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_week_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_temp, brood_temp',
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp',
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -303,7 +303,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_week_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_temp, brood_temp'
+                  columnsToChart: 'bot_temp, brood_temp, ambient_temp'
               })
               tempChart.dropAnchor();
               tempChart.render();
@@ -314,7 +314,7 @@
       <ul class='legend'>
         <li class='label ord1st'>Attic Temp</li>
         <li class='label ord2nd'>Brood Temp</li>
-        <li class='label ord3rd'>Ambient Temp (coming soon)</li>
+        <li class='label ord3rd'>Ambient Temp</li>
       </ul>
     </div>
     <div class="tabs-panel" id="humidity-panel">
@@ -326,7 +326,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/instant_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart1i.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -344,7 +344,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/instant_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart2i.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -364,7 +364,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/15_minutes_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart1m.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -382,7 +382,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/15_minutes_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart2m.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -402,7 +402,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_hour_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart1h.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -420,7 +420,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_hour_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart2h.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -440,7 +440,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_day_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart1d.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -458,7 +458,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_day_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart2d.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -478,7 +478,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_week_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_1',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart1w.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -496,7 +496,7 @@
                   dataUrl: "http://hivemom-datafiles-production.s3-website-us-west-2.amazonaws.com/1_week_data.csv",
                   groupColumn: 'probeid',
                   groupsToChart: 'HIVE_2',
-                  columnsToChart: 'bot_humidity, brood_humidity'
+                  columnsToChart: 'bot_humidity, brood_humidity, ambient_humidity'
               })
               humidityChart2w.dropAnchor();
               $('#metric-tabs').on('change.zf.tabs', function() {
@@ -511,7 +511,7 @@
       <ul class='legend'>
         <li class='label ord1st'>Attic Humidity</li>
         <li class='label ord2nd'>Brood Humidity</li>
-        <li class='label ord3rd'>Ambient Humidity (coming soon)</li>
+        <li class='label ord3rd'>Ambient Humidity</li>
       </ul>
     </div>
     <div class="tabs-panel" id="weight-panel">
